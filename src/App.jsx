@@ -4,7 +4,7 @@
 
 import { Footer } from "./Footer"
 import { Rules } from "./Rules"
-import Pippo from "./pippo"
+
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
     <Rules/>
     <Footer/>
 
-    {/* <Pippo/> */}
+    
 
  
       
