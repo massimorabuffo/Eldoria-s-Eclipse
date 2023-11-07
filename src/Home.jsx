@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Avventura } from "./Avventura"
+import "./Avventura"
 import { Outlet, useNavigate } from "react-router-dom"
 
 export function Home() {
@@ -9,11 +9,11 @@ export function Home() {
 
     function startAdventure() {
         setHidden((item) => !item)
-        navigate('/home/adventure')
+        navigate('/adventure')
     }
     return (
         <div className="background-home">
-            <img src="src/assets\dragonforbg.jpg" alt="drago" />
+            <img src="dragonforbg.jpg" alt="drago" />
             <div className="container-sword-svg">
                 <img src='src/assets\swords-svg.png'/>
             </div>

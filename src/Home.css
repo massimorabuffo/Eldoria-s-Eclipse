@@ -1,24 +1,37 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: 'MedievalSharp';
+}
+.active{
+    display: block;
+}
+.disactive{
+    display: none;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(94, 13, 13);
 }
 .background-home{
     background-repeat:no-repeat;
-    object-fit: cover;
-    height: 760px;
+    background-size:contain;
+    height: 44vw;
     width: fit-content;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 .background-home>img{
-    width: 100%;
-    height: 100%;
+    width: 99vw;
+    height: 45vw;
 }
 .container-sword-svg{
     position: absolute;
-    top: 202px;
+    top: 13.5vw;
+    left: 38vw;
     width: 320px;
     height: 300px;
     display: flex;
@@ -28,14 +41,10 @@
     width: 100%;
     height: 100%;
 }
-.active{
-    display: block;
-}
-.disactive{
-    display: none;
-}
+
 .container-start-button{
     position: absolute;
+    top: 23vw;
 }
 .start-button{
     border-radius: 20px;
@@ -44,43 +53,37 @@
     background-color: rgb(106, 0, 0);
     color: black;
     height: 70px;
-    
 }
-.navbar-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(94, 13, 13);
-}
-.wrapper-home{
+/* SEZIONE DELL AVVENTURA */
+.wrapper-adventure{
     background-color: rgb(169, 136, 95);
 }
-.container-home{
-    
+.container-adventure{
     background-repeat: no-repeat;
 }
-.container-text-home{
+.container-text-adventure{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-.text-home{
+.text-adventure{
     width: 80%;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    text-align: center;
+    flex-direction: column;
     margin-bottom: 20px;
 }
-.container-card-home{
+.container-card-adventure{
     display: flex;
     justify-content: space-evenly;
 }
-.card-home{
+.card-adventure{
     border: 5px solid black;
     border-radius: 40px;
     height: 100%;
     width: 300px;
     background-color: rgb(168, 137, 111);
+    box-shadow: 18px 18px 4px rgba(0, 0, 0, 0.3)
 }
 
 .character-img>img{
@@ -105,4 +108,25 @@
 .characters-description{
     font-size: 13px;
 }
+.container-hero{
+    width: 80%;
+    margin-bottom: 20px;
+}
+/* BOTTONI */
 
+.container-continue-button{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 15px;
+}
+.continue-button{
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: 25px;
+    margin: 10px;
+}

@@ -3,7 +3,7 @@ import "./home.css"
 export function Navbar(){
     const navigate = useNavigate()
     function goHome(){
-        navigate('home')
+        navigate('/')
     }
     function goToRules(){
         navigate('rules')
