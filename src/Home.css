@@ -3,6 +3,10 @@
     box-sizing: border-box;
     font-family: 'MedievalSharp';
 }
+
+body::-webkit-scrollbar{
+    display: none;
+}
 .active{
     display: block;
 }
@@ -18,15 +22,19 @@
 .background-home{
     background-repeat:no-repeat;
     background-size:contain;
-    height: 44vw;
-    width: fit-content;
+    height: max-content;
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
 }
+.background-home::-webkit-scrollbar{
+    display: none;
+}
 .background-home>img{
-    width: 99vw;
+    width: 100vw;
     height: 45vw;
+    
 }
 .container-sword-svg{
     position: absolute;
@@ -47,12 +55,14 @@
     top: 23vw;
 }
 .start-button{
+    cursor: pointer;
     border-radius: 20px;
     border: 3px solid black;
     padding: 10px;
     background-color: rgb(106, 0, 0);
     color: black;
     height: 70px;
+    box-shadow: 0px 15px 4px rgba(0, 0, 0, 0.4)
 }
 /* SEZIONE DELL AVVENTURA */
 .wrapper-adventure{
@@ -67,17 +77,24 @@
     align-items: center;
 }
 .text-adventure{
+    margin: 10px 0px;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     margin-bottom: 20px;
 }
+.text-adventure>p{
+    font-size: 20px;
+    font-weight:bold;
+    color: #000000;
+}
 .container-card-adventure{
     display: flex;
     justify-content: space-evenly;
 }
 .card-adventure{
+    cursor: pointer;
     border: 5px solid black;
     border-radius: 40px;
     height: 100%;
@@ -115,6 +132,7 @@
 /* BOTTONI */
 
 .container-continue-button{
+    cursor: pointer;
     width: 80%;
     display: flex;
     justify-content: center;
@@ -124,9 +142,13 @@
     margin: 15px;
 }
 .continue-button{
+    border-radius: 4px;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    width: 70px;
-    height: 25px;
+    justify-content: center;
+    width: 150px;
+    height: 35px;
     margin: 10px;
+    padding: 10px;
 }

@@ -3,17 +3,20 @@ import { Navbar } from "./navbar"
 import { Home } from "./Home"
 import { Rules } from "./Rules"
 import { Testo } from "./TestoDiProva"
-import { Avventura } from "./Avventura"
+import { Adventure } from "./Adventure"
+import { Game } from "./Game"
 
 function App() {
 
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/adventure" element={<Avventura/>}/>
-        <Route path="rules" element={<Rules/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/adventure" element={<Adventure />} />
+          <Route path="/game/:hero" element={<Game />} />
+          <Route path="rules" element={<Rules />} />
+
       </Routes>
     </>
   )

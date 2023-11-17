@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./Avventura"
+import "./Adventure"
 import { Outlet, useNavigate } from "react-router-dom"
 
 export function Home() {
@@ -13,7 +13,7 @@ export function Home() {
     }
     return (
         <div className="background-home">
-            <img src="dragonforbg.jpg" alt="drago" />
+            <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/11/Shadow-of-the-Dragon-Queen-Dragonlance.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5" alt="drago" />
             <div className="container-sword-svg">
                 <img src='src/assets\swords-svg.png'/>
             </div>
