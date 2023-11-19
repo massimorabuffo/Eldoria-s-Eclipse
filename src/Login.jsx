@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 const Login = () => {
@@ -8,6 +8,8 @@ const Login = () => {
         password: '',
         remember: false,
     })
+    const [counter, setCounter] = useState(0);
+    const [showError, setShowError] = useState(false);
 
     const handleInputChange = (event) => {
         const name = event.target.name;
@@ -23,9 +25,31 @@ const Login = () => {
         })
     }
 
-    const handleSubmit = () => {
-        navigate(`/home/${data.username}`);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setCounter(prev => prev++);
+        const fetchData = async () => {
+            const response = await fetch("http://localhost:3000/users");
+            const dataJson = await response.json();
+            console.log(dataJson);
+            dataJson.map(el => {
+                if(el.name === data.username && el.password === data.password){
+                    navigate('/game');
+                } else{
+                    setShowError(true);
+                }
+            })
+        }
+        fetchData();
     }
+
+    useEffect(() => {
+        try{
+            handleSubmit();
+        } catch(error){
+            console.log(error);
+        }
+    }, [counter])
 
     return (
         <div className="form_container">
@@ -35,9 +59,10 @@ const Login = () => {
                 </div>
                 <form onSubmit={handleSubmit}>
                     <div>Username</div>
-                    <input required id='input_user' type="text" name='username' value={data.username} onChange={handleInputChange} placeholder="Username" />
+                    <input className={showError && "input_error"} required id='input_user' type="text" name='username' value={data.username} onChange={handleInputChange} placeholder="Username" />
                     <div>Password</div>
-                    <input required id="input_password" type="password" name='password' value={data.password} onChange={handleInputChange} placeholder="Password"/>
+                    <input className={showError && "input_error"} required id="input_password" type="password" name='password' value={data.password} onChange={handleInputChange} placeholder="Password"/>
+                    {showError && <h3 className="error_message">Credenziali errate.</h3>}
                     <div className="login_checkbox">
                         <div>
                             <input type="checkbox" id='remember' name='remember' checked={data.remember} onChange={handleInputChange} />

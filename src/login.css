@@ -27,7 +27,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem 3.3rem 1rem 3.3rem;
+    padding: 2rem 3.3rem 2rem 3.3rem;
     width: 35vw;
     height: 50vh;
     background-color: rgba(31, 31, 31, 0.875);
@@ -60,6 +60,14 @@ body{
     height: 35px;
 }
 
+.input_error{
+    border-color: rgb(255, 0, 0);
+}
+
+.error_message{
+    margin: 0;
+    color: rgb(255, 0, 0);
+}
 
 .login_checkbox > div{
     display: flex;
@@ -115,8 +123,8 @@ body{
 
 @media screen and (max-width: 1024px){
     .login_form{
-        /* padding-top: 2rem;
-        padding-bottom: 2rem; */
+        padding-top: 3rem;
+        padding-bottom: 3rem; 
     }
 }
 
