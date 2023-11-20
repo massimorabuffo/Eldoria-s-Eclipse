@@ -1,7 +1,7 @@
 export function Character({hero}){
 
     return(
-        <div className="container-paladin">
+        <div className="container-hero">
             {hero === 'paladin' ? <h2>Hai scelto il Paladino</h2> : <h2>Hai scelto il Mago</h2>}
             {hero === 'paladin' && <h3>Nella luce del sole brillante, un paladino emerge, 
                 la figura di un guerriero vestito in una sontuosa armatura di placche. 

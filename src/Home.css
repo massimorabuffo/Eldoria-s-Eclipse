@@ -13,12 +13,10 @@ body::-webkit-scrollbar{
 .disactive{
     display: none;
 }
-.navbar-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(94, 13, 13);
-}
+
+/* HOME SECTION */
+
+
 .background-home{
     background-repeat:no-repeat;
     background-size:contain;
@@ -59,17 +57,24 @@ body::-webkit-scrollbar{
     border-radius: 20px;
     border: 3px solid black;
     padding: 10px;
-    background-color: rgb(106, 0, 0);
+    background-color: #6a0000;
     color: black;
     height: 70px;
     box-shadow: 0px 15px 4px rgba(0, 0, 0, 0.4)
 }
 /* SEZIONE DELL AVVENTURA */
+
+
 .wrapper-adventure{
-    background-color: rgb(169, 136, 95);
+    /* background-color: rgb(189, 131, 59); */
+    background: linear-gradient(to top, #5c0e0e 5%, #600808 40%, #321c0d 100%);
+    display: flex;
+    justify-content: center;
+    text-align: start;
 }
 .container-adventure{
-    background-repeat: no-repeat;
+    background-color: rgb(188, 158, 122); 
+    width: 75%;
 }
 .container-text-adventure{
     display: flex;
@@ -129,6 +134,51 @@ body::-webkit-scrollbar{
     width: 80%;
     margin-bottom: 20px;
 }
+
+
+
+
+
+/* GAME SECTION */
+
+
+
+
+.wrapper-game{
+    background: linear-gradient(to top, #5c0e0e 5%, #600808 40%, #321c0d 100%);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    height: max-content;
+    padding-bottom: 20px;
+}
+.container-game{
+    background-color: rgb(188, 158, 122); 
+    width: 75%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container-text-game{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-game{
+    font-size: 22px;
+    margin: 10px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.container-hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* BOTTONI */
 
 .container-continue-button{
@@ -138,16 +188,15 @@ body::-webkit-scrollbar{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    flex-direction: column;
     margin: 15px;
 }
-.continue-button{
+.button-continue{
     border-radius: 4px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
+    min-width: 150px;
     height: 35px;
     margin: 10px;
     padding: 10px;
