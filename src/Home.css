@@ -1,8 +1,4 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'MedievalSharp';
-}
+
 
 body::-webkit-scrollbar{
     display: none;
@@ -32,7 +28,6 @@ body::-webkit-scrollbar{
 .background-home>img{
     width: 100vw;
     height: 45vw;
-    
 }
 .container-sword-svg{
     position: absolute;

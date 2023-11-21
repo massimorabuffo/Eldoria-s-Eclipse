@@ -8,10 +8,6 @@
     src: url(./fonts/Alegreya/Alegreya-Italic-VariableFont_wght.ttf);
 }
 
-body{
-    margin: 0;
-}
-
 .form_container{
     width: 100vw;
     height: 100vh;
