@@ -1,0 +1,161 @@
+@font-face {
+    font-family: login_title;
+    src: url(./fonts/IM_Fell_DW_Pica_SC/IMFellDWPicaSC-Regular.ttf);
+}
+
+@font-face {
+    font-family: login_text;
+    src: url(./fonts/Alegreya/Alegreya-Italic-VariableFont_wght.ttf);
+}
+
+body{
+    margin: 0;
+}
+
+.form_container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./assets/landscape_wallpaper.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 3.3rem 2rem 3.3rem;
+    width: 35vw;
+    height: 50vh;
+    background-color: rgba(31, 31, 31, 0.875);
+    outline: 3px solid rgb(217, 184, 0);
+}
+
+.form_title{
+    text-align: center;
+    margin: 0;
+    color: rgb(217, 184, 0);
+    font-family: login_title;
+    font-size: large;
+}
+
+.login_form form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    font-family: login_text;
+    color: rgb(217, 184, 0);
+}
+
+#input_password{
+    margin-bottom: 0.5rem;
+}
+
+.login_form form input{
+    font-family: login_text;
+    height: 35px;
+}
+
+.input_error{
+    border-color: rgb(255, 0, 0);
+}
+
+.error_message{
+    margin: 0;
+    color: rgb(255, 0, 0);
+}
+
+.login_checkbox > div{
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+}
+
+.login_checkbox > div > div{
+    display: flex;
+    align-items: center;
+}
+
+.login_checkbox a{
+    color: rgb(217, 184, 0);
+}
+
+.login_form form button{
+    margin: 10px auto;
+    width: 250px;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    font-family: login_title;
+    color: rgb(217, 184, 0);
+    font-size: 18px;
+    font-weight: 400;
+    text-shadow: 0 1px 3px #000;
+    text-align: center;
+    padding: 10px 0;
+    background: radial-gradient(circle, #8b0000, #8b0000);
+    /* border-top: 4px ridge #ffb000;
+    border-left: 4px groove #ffb000;
+    border-right: 4px ridge #ffb000;
+    border-bottom: 4px groove #ffb000; */
+    box-shadow: inset 0px 0px 5px 3px rgba(1,1,1,0.3);
+}
+
+.login_form form button:hover{
+    background: radial-gradient(circle, #e52b2b, #8b0000);
+    box-shadow: 0px 0 5px 5px rgba(255,255,255,0.2)
+}
+  
+.login_form form button:active{
+    background: radial-gradient(circle, #ec6a6a, #e52b2b);
+    box-shadow: 0px 0 5px 5px rgba(255,255,255,0.2)
+}
+
+
+.login_checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px){
+    .login_form{
+        padding-top: 3rem;
+        padding-bottom: 3rem; 
+    }
+}
+
+@media screen and (max-width: 768px){
+    .login_form{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 50vw;
+        height: 35vh;
+    }
+}
+
+@media screen and (max-width: 426px){
+    .login_form{
+        width: 70vw;
+        height: 40vh;
+
+    }
+}
+
+@media screen and (max-width: 320px){
+    .login_form{
+        height: 55vh;
+        width: 90vw;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media screen and (max-height: 650px){
+    .login_form{
+        height: 55vh;
+    }
+}
