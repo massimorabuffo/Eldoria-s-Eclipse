@@ -29,7 +29,12 @@
 
 .button-footer {
   display: flex;
+  align-items: center;
   gap: 1rem;
+}
+
+.left-footer{
+  margin-left: auto;
 }
 
 .separatore {
@@ -73,13 +78,50 @@
     padding-top: 0;
 }
 
+.input-newsletter{
+  width: 300px;
+  border-radius: 5px;
+  height: 10px;
+  border: none;
+  padding: 20px;
+
+}
+
+
+.button-newsletter{
+  width: 110px;
+  height: 50px;
+  background-color: #232325;
+  border: 1px solid #219ebc;
+  border-radius: 5px;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.button-newsletter:hover{
+  background-color: #219ebc;
+  opacity: 0.8;
+  transition: 1s;
+  color: #f5f8fa;
+
+
+}
+
 .social {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   padding-top: 1rem;
+  padding-left: 30px;
+  padding-right: 30px;
   margin: auto;
   justify-content: center;
   padding-bottom: 2rem;
+}
+
+.icon-social-footer{
+  font-size: 200px;
+  color: "#0e76a8";
 }
 
 .copyright-footer {
@@ -93,4 +135,89 @@
   display: flex;
   margin: auto;
   justify-content: center;
+}
+
+
+
+@media (max-width: 1024px){
+  .dimensioni-footer{
+    flex-direction: column;
+  }
+
+  .container-footer{
+    max-width: 100%;
+  }
+
+  .left-footer{
+    margin-left: 0;
+  }
+
+  .separatore{
+    justify-content: space-around;
+    margin-left: 0;
+  }
+
+  .newsletter-footer{
+    display: flex;
+    margin-top: 2rem;
+  }
+
+  .title-footer{
+    margin-right: 2rem;
+  }
+
+  .input-newsletter{
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px){
+  .title-footer{
+    font-size: 25px;
+  }
+
+  .container-footer > p{
+    font-size: 15px;
+  }
+
+  .hover-footer{
+    font-size: 15px;
+  }
+
+  .info-contatti{
+    font-size: 14px;
+  }
+
+  .input-newsletter{
+    width: 240px;
+    height: 5px;
+  }
+
+  .button-newsletter{
+    width: 100px;
+    height: 45px;
+  }
+
+  .copyright-footer > span{
+    font-size: 12px;
+  }
+  
+}
+
+@media (max-width: 600px){
+  .separatore{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .newsletter-footer{
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 428px){
+  .button-footer{
+    flex-direction: column;
+  }
 }

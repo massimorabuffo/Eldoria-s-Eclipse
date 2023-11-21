@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(to bottom, #000000, #800000);
+  background: linear-gradient(to top, #5c0e0e 5%, #600808 40%, #321c0d 100%);
   color: rgb(233, 233, 233);
   padding-bottom: 4rem;
   font-family: "Caveat", cursive;
@@ -34,28 +34,116 @@
   padding: 30px;
 }
 
-.flex-rules {
-  display: flex;
-  gap: 3rem;
-}
-
 .text-rules > p {
   font-size: 21px;
 }
 
-.container-img > img {
+.flex-rules2{
+  margin-top: 3rem;
+}
+
+.title-rules-h2{
+  margin: 0;
+}
+
+.container-squadra-img {
+  float: right;
   background-size: cover;
   background-position: center center;
-  width: 500px;
-  height: 270px;
+  width: 550px;
+  height: auto;
   border-radius: 5px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   opacity: 0.8;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
 }
 
-.container-dragon > img {
+.container-dragon-img {
+  float: left;
   width: 400px;
-  height: 600px;
+  height: 650px;
   border-radius: 5px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  margin-right: 3rem;
+}
+
+@media (max-width: 1024px) {
+  .color-rules {
+    font-size: 28px;
+  }
+
+  .container-squadra-img {
+    width: 470px;
+    margin-bottom: 1rem;
+  }
+  .text-rules > p {
+    font-size: 19px;
+  }
+
+  .container-dragon-img {
+    height: auto;
+    width: 330px;
+  }
+}
+
+@media (max-width: 768px) {
+  .color-rules {
+    font-size: 25px;
+  }
+
+  .container-squadra-img {
+    width: 410px;
+  }
+  .text-rules > p {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .container-dragon-img {
+    margin-bottom: 1rem;
+    width: 300px;
+    margin-right: 2rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .color-rules {
+    font-size: 23px;
+  }
+
+  .flex-rules {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-squadra-img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .container-dragon-img {
+    width: 270px;
+    height: auto;
+  }
+}
+
+@media (max-width: 428px) {
+  .color-rules {
+    font-size: 23px;
+  }
+
+  .flex-rules {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-squadra-img {
+    width: 100%;
+  }
+
+  .container-dragon-img {
+    width: 100%;
+  }
 }

@@ -11,6 +11,13 @@ export function Rules() {
       <div className="container-rules-generale">
         <h2>Introduzione al gioco</h2>
         <div className="flex-rules">
+
+        <div className="container-squadra">
+            <img className="container-squadra-img"
+              src="https://static1.srcdn.com/wordpress/wp-content/uploads/2021/07/Dungeons-and-Dragons-backgrounds.jpg"
+              alt=""
+            />
+          </div>
           <div className="text-rules">
             <p>
               In Dungeons & Dragons, i giocatori formano un gruppo di
@@ -25,20 +32,18 @@ export function Rules() {
               quel personaggio.
             </p>
           </div>
-          <div className="container-img">
-            <img
-              src="https://static1.srcdn.com/wordpress/wp-content/uploads/2021/07/Dungeons-and-Dragons-backgrounds.jpg"
-              alt=""
-            />
-          </div>
+          
         </div>
 
-        <div className="flex-rules">
-          <div className="container-dragon">
-            <img src="https://wallpapercave.com/dwp1x/wp7069126.jpg" alt="" />
+        
+
+        <div className="flex-rules2">
+       
+          <div className="container-dragon" >
+            <img className="container-dragon-img" src="https://wallpapercave.com/dwp1x/wp7069126.jpg" alt="" />
           </div>
           <div className="text-rules">
-            <h2>Si entra nell'avventura</h2>
+          <h2 className="title-rules-h2">Si entra nell'avventura</h2>
             <p>
               I personaggi hanno sei attributi fondamentali: Forza, Destrezza,
               Costituzione, Intelligenza, Saggezza e Carisma. Questi attributi

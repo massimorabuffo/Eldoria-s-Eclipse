@@ -1,7 +1,3 @@
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-
-import Button from "@mui/material/Button";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -13,8 +9,21 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import CottageIcon from "@mui/icons-material/Cottage";
 import MailIcon from "@mui/icons-material/Mail";
 import CallIcon from "@mui/icons-material/Call";
+import { useState } from "react";
 
 export function Footer() {
+    // const [valueNewsletter, setValueNewsletter] = useState()
+
+    // const valueInput = (e) => {
+    //   const value = e.target.value;
+    //   console.log(value);
+    //   setValueNewsletter(value);
+    // }
+
+    // const buttonInput = () => {
+    //   console.log(valueNewsletter);
+    // }
+
   return (
     <footer className="background-footer">
       <div className="dimensioni-footer">
@@ -32,10 +41,12 @@ export function Footer() {
             </p>
           </div>
         
+        <div className="left-footer">
 
+        
         <div className="separatore">
           <div className="contatti-footer">
-            <h3 className="title-footer">Quick Links</h3>
+            <h3 className="title-footer">QuickLi</h3>
             <span className="hover-footer">About Us</span>
             <span className="hover-footer">Privacy Policy</span>
             <span className="hover-footer">Contribute</span>
@@ -85,72 +96,61 @@ export function Footer() {
         </div>
       </div>
 
+      </div>
+
       <div className="newsletter-footer">
         <h3 className="title-footer">Iscriviti alla nostra newsletter</h3>
 
         <div className="button-footer">
-          <Box
-            sx={{
-              "& > :not(style)": {
-                backgroundColor: "white",
-                width: "50ch",
-              },
-            }}
-          >
-            <TextField
-              id="outlined-basic"
-              label="Inserisci la tua e-mail "
-              variant="outlined"
-            />
-          </Box>
-
-          <Button sx={{ width: "130px" }} variant="outlined">
-            Invia
-          </Button>
+       
+                <input className="input-newsletter" type="email" placeholder="Scrivi qui la tua email" />
+                <button className="button-newsletter"> Invia</button>
+        
         </div>
       </div>
 
       <div className="social">
-        <LinkedInIcon
+        <LinkedInIcon className="icon-social-footer"
           sx={{
-            fontSize: 60,
+            fontSize: 50,
             color: "#0e76a8",
-            "&:hover": { cursor: "pointer", fontSize: 65 },
+            "&:hover": { cursor: "pointer", fontSize: 55 },
+            '@media (width: 999px)':{fontSize:30 }
           }}
         />
         <FacebookIcon
           sx={{
-            fontSize: 60,
+            fontSize: 50,
             color: "#3b5998",
-            "&:hover": { cursor: "pointer", fontSize: 65 },
+            "&:hover": { cursor: "pointer", fontSize: 55 },
           }}
         />
         <InstagramIcon
           sx={{
-            fontSize: 60,
+            fontSize: 50,
             color: "#E4405F",
-            "&:hover": { cursor: "pointer", fontSize: 65 },
+            "&:hover": { cursor: "pointer", fontSize: 55 },
           }}
         />
         <WhatsAppIcon
           sx={{
-            fontSize: 60,
+            fontSize: 50,
             color: "#075E54",
-            "&:hover": { cursor: "pointer", fontSize: 65 },
+            "&:hover": { cursor: "pointer", fontSize: 55 },
           }}
         />
         <GoogleIcon
           sx={{
-            fontSize: 60,
+            fontSize: 50,
             color: "#D32F2F",
-            "&:hover": { cursor: "pointer", fontSize: 65 },
+            "&:hover": { cursor: "pointer", fontSize: 55 },
           }}
         />
         <GitHubIcon
           sx={{
-            fontSize: 60,
+            fontSize: 50,
             color: "white",
-            "&:hover": { cursor: "pointer", fontSize: 65 },
+            "&:hover": { cursor: "pointer", fontSize: 55 },
           }}
         />
       </div>
