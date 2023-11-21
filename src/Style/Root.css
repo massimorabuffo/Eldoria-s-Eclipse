@@ -1,3 +1,19 @@
 :root{
+    --clr-bg-question: #7e0004;
+    --clr-main: #cfb000;
+    --clr-answer: #ffffff;
+    --clr-bg-answer: #1f1f1f;
+    --clr-bg-main: #1f1f1fd3;
+}
+
+@font-face {
+    font-family: 'MedievalSharp';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/medievalsharp/v26/EvOJzAlL3oU5AQl2mP5KdgptMqhwMg.woff2) format('woff2');
+}
+
+*{
+    font-family: 'MedievalSharp';
     color: black;
 }
