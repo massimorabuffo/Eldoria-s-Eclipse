@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './stili/About.css'
+
 
 export function About() {
   const [isOpen, setIsOpen] = useState(null);
@@ -51,7 +51,7 @@ export function About() {
       </div>
 
       <div className="wrapper-accordion">
-        <h1>Informazioni sul gioco</h1>
+      <h1>Informazioni sul gioco</h1>
         <div className="accordion">
           {faq.map((item, i) => (
             <div className="container">

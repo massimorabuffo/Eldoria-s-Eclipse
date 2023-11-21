@@ -6,6 +6,15 @@
     position: relative;
 }
 
+.nonloso > h1{
+  color: var(--clr-main);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
 .titolo-about{
   position: absolute;
   top: 20%;
@@ -17,10 +26,11 @@
   background-color: var(--clr-bg-main);
   border: 2px solid var(--clr-main);
   position: absolute;
-  top: 30%;
-  left: 24.5%;
+  top: 50%;
+  left: 50%;
   height: 700px;
   width: 1000px;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,13 +110,13 @@
 
 @media screen and (max-width: 768px) {
   .nonloso > img{
-    height: 100vh;
+    height: 100svh;
     width: 100%;
     object-fit: cover;
   }
 
   .wrapper-accordion{
-    height: 500px;
+    height: 630px;
     width: 500px;
   }
 
@@ -123,7 +133,7 @@
   }
 
   .answer.show{
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -136,7 +146,7 @@
 
   .wrapper-accordion{
     width: 400px;
-    height: 550px;
+    height: 600px;
   }
 
   .accordion{

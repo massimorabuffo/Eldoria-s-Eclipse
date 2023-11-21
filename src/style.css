@@ -1,5 +1,5 @@
-@import url('./stili/Root.css');
-@import url('./stili/About.css');
+@import url('./Style/About.css');
+@import url('./Style/Root.css');
 
 *{
     margin: 0;

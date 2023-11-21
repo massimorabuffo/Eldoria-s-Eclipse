@@ -1,11 +1,11 @@
-import { About } from "./About"
+import { About } from "./Components/About"
 import './style.css'
 
 function App() {
 
   return (
     <>
-      <About/>
+      
     </>
   )
 }
