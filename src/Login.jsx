@@ -31,10 +31,9 @@ const Login = () => {
         const fetchData = async () => {
             const response = await fetch("http://localhost:3000/users");
             const dataJson = await response.json();
-            console.log(dataJson);
             dataJson.map(el => {
                 if(el.name === data.username && el.password === data.password){
-                    navigate('/game');
+                    navigate(`/${el.name}/${el.id}`);
                 } else{
                     setShowError(true);
                 }
@@ -47,7 +46,7 @@ const Login = () => {
         try{
             handleSubmit();
         } catch(error){
-            console.log(error);
+            console.error(error);
         }
     }, [counter])
 

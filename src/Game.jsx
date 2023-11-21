@@ -1,7 +1,10 @@
+import { useParams } from "react-router-dom"
+
 const Game = () => {
+    const {id} = useParams();
     return(
         <>
-        <h1>Game!</h1>
+        <h1>Welcome back, {id}!</h1>
         </>
     )
 }
