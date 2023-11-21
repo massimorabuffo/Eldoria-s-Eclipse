@@ -16,7 +16,7 @@ export function Game() {
     const [choose, setChoose] = useState('')
     const [hidden, setHidden] = useState(true);
 
-    const paragrafhArr = [
+    const paragraphArr = [
         {
             text: '1 Story',
             textP: "Nel bel mezzo di questa imminente catastrofe, si ergono figure di speranza e coraggio. Nella luce del sole brillante, emerge un paladino, un guerriero il cui destino è intrecciato indissolubilmente a quello del regno. Vestito in un'armatura scintillante di placche, i cui simboli sacri risplendono di un bagliore divino, il paladino avanza con occhi intensi e determinati. La sua spada sacra, pronta a essere sguainata contro le tenebre, è la lama che taglia l'oscurità, un baluardo contro la minaccia del drago d'ombra.",
@@ -50,18 +50,34 @@ export function Game() {
         },
     ]
 
-
+    const paragraphArr2 = [
+        {
+            text: '4 Story',
+            textP: "Storia secondo Array",
+            textM: "Le mani della maga sono agili e delicate, ma vibrano con un potere arcano immenso amplificato dal cristallo nel suo bastone. Ogni gesto che compie è studiato e preciso, mentre intona antiche formule magiche con una voce che risuona come una melodia incantata.",
+            id: 4,
+        },
+        {
+            text: '5 Story',
+            textP: "Storia secondo Array",
+            textM: 'Background Mago',
+            id: 5,
+        },
+    ]
 
     // FUNZIONI FUNZIONI FUNZIONI FUNZIONI
     const handleContinue = () => {
-
         if (number < 4) {
-            setData([...data, paragrafhArr[number]]);
+            setData([...data, paragraphArr[number]]);
             setNumber(number + 1);
-        } else if (number >= paragrafhArr.length) {
+        } else if (number == paragraphArr.length) {
             setHidden((item) => !item)
-        }
-        else { console.error('error') }
+            setNumber(number + 1);
+            setSecondData([...secondData, paragraphArr2[number]])
+        } else if(number > 4) {
+            setSecondData([...secondData, paragraphArr2[number]]);
+            setNumber(number + 1);
+        } else { console.error('error') }
     };
 
     const chooseA = () => {
@@ -74,9 +90,11 @@ export function Game() {
         console.log('B was clicked')
     }
 
+
     return (
         <>
             <div className="wrapper-game">
+                {/* <h1 style={{display: "none"}}>Ciao</h1> */}
                 <div className="container-game">
                     <div className="container-text-game">
                         <h2 className="text-game">Nel regno di Eldoria persiste un antico culto dedicato a Tiamath, all'interno della cui
@@ -90,8 +108,6 @@ export function Game() {
                         {data.map((el) => (
                             <h4 className="text-game" key={el.id}>{hero === 'paladin' ? el.textP : el.textM}</h4>
                         ))}
-
-
                     </div>
                     {/* BOTTONI */}
 
@@ -103,10 +119,11 @@ export function Game() {
                         
                     </div>)}
                     {chooseArray.map((el) => (
-                            <h4 >{choose === 'A' ? el.textA : choose === 'B' && el.textB}</h4>
+                        <h4 >{choose === 'A' ? el.textA : choose === 'B' && el.textB}</h4>
                     ))}
                     
                     {hidden && <button className='button-continue' onClick={() => handleContinue()}>Continua</button>}
+                    
                 </div>
             </div>
         </>
