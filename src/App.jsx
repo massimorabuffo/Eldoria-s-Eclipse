@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 import { Route, Routes } from "react-router-dom"
 import Login from "./Login"
 import Game from "./Game"
@@ -7,15 +14,19 @@ import { Adventure } from "./Components/Adventure.jsx";
 import { Game } from "./Components/Game.jsx";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/NavBar';
-import About from './Components/About';
-import Rules from './Components/Rules';
+import { Footer } from "./Footer"
+import { Rules } from "./Rules"
 import { About } from "./Components/About";
 import "./Style/App.css"
 import "./Home.css"
 import './style.css'
+  
+
 
 function App() {
   return (
+
+
     <Router>
       <Navbar/>
       <Routes>
@@ -24,6 +35,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Rules" element={<Rules/>} />
+        <Route path="/Footer" element={<Footer/>} />
         <Route path="/adventure" element={<Adventure />} />
         <Route path="/game/:hero" element={<Game />} />
       </Routes>
