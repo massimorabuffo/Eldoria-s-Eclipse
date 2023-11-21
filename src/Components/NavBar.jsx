@@ -26,7 +26,7 @@ function Navbar() {
           </button>
           </li>
 
-         <li className='List-Nav' ><button><Link className='Tab' to="/">Home</Link></button></li> 
+         <li className='List-Nav' ><button><Link className='Tab' to="/home">Home</Link></button></li> 
         <li className="List-Nav">
         <div className="dice" id="animated-dice">
           <Dice/>

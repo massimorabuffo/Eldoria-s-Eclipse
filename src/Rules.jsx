@@ -1,5 +1,9 @@
+import { Footer } from "./Footer";
+
 export function Rules() {
   return (
+    <>
+    
     <div className="rules">
       <div className="img-rules"></div>
 
@@ -67,6 +71,9 @@ export function Rules() {
           </div>
         </div>
       </div>
+      
     </div>
+    <Footer/>
+    </>
   );
 }
