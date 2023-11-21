@@ -81,10 +81,7 @@
   }
 }
 
-.background-image {
-  width: 98.7vw;
-  height: 40.2vw;
-}
+
 
 
 .Tab {
@@ -176,3 +173,5 @@ form {
 .sidebar.visible {
   left: 0;
 }
+
+

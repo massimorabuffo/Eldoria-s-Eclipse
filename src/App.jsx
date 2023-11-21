@@ -4,7 +4,6 @@ import Navbar from './Components/NavBar';
 import Home from './Components/Home.jsx';
 import About from './Components/About';
 import Rules from './Components/Rules'
-
 import "./Style/App.css"
 
 function App() {
