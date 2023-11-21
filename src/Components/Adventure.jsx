@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { Character } from "./Character"
 import { useNavigate } from "react-router-dom"
-import { Game } from "./Game"
 
 export function Adventure() {
     const [hero, setHero] = useState('')

@@ -1,15 +1,13 @@
 
-import { Home } from "./Home"
-import { Adventure } from "./Adventure"
-import { Game } from "./Game"
-import "./Home.css"
-
+import { Home } from "./Components/Home.jsx"
+import { Adventure } from "./Components/Adventure.jsx"
+import { Game } from "./Components/Game.jsx"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/NavBar';
-import Home from './Components/Home.jsx';
 import About from './Components/About';
 import Rules from './Components/Rules'
 import "./Style/App.css"
+import "./Home.css"
 
 function App() {
   return (

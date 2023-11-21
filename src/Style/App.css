@@ -2,8 +2,8 @@
 
 .dice {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-image: url('https://www.dadi-online.it/img/dadi/20-facce/dadi-20-facce.png');
   background-size: cover;
   animation: rotateDice 2s linear infinite;
@@ -55,7 +55,7 @@
 
 .navbar {
   width: 100%;
-  height: 7rem;
+  height: 5.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -103,8 +103,8 @@
 .Title {
   position: absolute;
   color: white;
-  top: 2rem;
-  left: 43rem;
+  top: 1.3rem;
+  left: 41rem;
   font-size: 40px;
   font-family: 'MedievalSharp';
 
