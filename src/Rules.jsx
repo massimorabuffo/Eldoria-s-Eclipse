@@ -8,12 +8,12 @@ export function Rules() {
       <div className="img-rules"></div>
 
       <div className="color-rules">
-        <h1>Regole del gioco</h1>
-        <h2>Come giocare a questo straordinario gioco</h2>
+        <h1 className="dimensione-h1h2-rules">Regole del gioco</h1>
+        <h2 className="dimensione-h1h2-rules">Come giocare a questo straordinario gioco</h2>
       </div>
 
       <div className="container-rules-generale">
-        <h2>Introduzione al gioco</h2>
+        <h2 className="title-rules-h2">Introduzione al gioco</h2>
         <div className="flex-rules">
 
         <div className="container-squadra">

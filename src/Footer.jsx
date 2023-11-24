@@ -112,45 +112,45 @@ export function Footer() {
       <div className="social">
         <LinkedInIcon className="icon-social-footer"
           sx={{
-            fontSize: 50,
+            fontSize: 55,
             color: "#0e76a8",
-            "&:hover": { cursor: "pointer", fontSize: 55 },
+            "&:hover": { cursor: "pointer", fontSize: 60},
             '@media (width: 999px)':{fontSize:30 }
           }}
         />
         <FacebookIcon
           sx={{
-            fontSize: 50,
+            fontSize: 55,
             color: "#3b5998",
-            "&:hover": { cursor: "pointer", fontSize: 55 },
+            "&:hover": { cursor: "pointer", fontSize: 60},
           }}
         />
         <InstagramIcon
           sx={{
-            fontSize: 50,
+            fontSize: 55,
             color: "#E4405F",
-            "&:hover": { cursor: "pointer", fontSize: 55 },
+            "&:hover": { cursor: "pointer", fontSize: 60},
           }}
         />
         <WhatsAppIcon
           sx={{
-            fontSize: 50,
+            fontSize: 55,
             color: "#075E54",
-            "&:hover": { cursor: "pointer", fontSize: 55 },
+            "&:hover": { cursor: "pointer", fontSize: 60},
           }}
         />
         <GoogleIcon
           sx={{
-            fontSize: 50,
+            fontSize: 55,
             color: "#D32F2F",
-            "&:hover": { cursor: "pointer", fontSize: 55 },
+            "&:hover": { cursor: "pointer", fontSize: 60},
           }}
         />
         <GitHubIcon
           sx={{
-            fontSize: 50,
+            fontSize: 55,
             color: "white",
-            "&:hover": { cursor: "pointer", fontSize: 55 },
+            "&:hover": { cursor: "pointer", fontSize: 60},
           }}
         />
       </div>

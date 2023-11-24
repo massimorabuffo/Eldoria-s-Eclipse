@@ -9,7 +9,7 @@
 }
 
 .img-rules {
-  background-image: url(assets/img-rules-footer/dnd_learntoplay_hero1.webp);
+  background-image: url("../assets/img-rules-footer/dnd_learntoplay_hero1-_1_.jpg");
   background-size: cover;
   background-position: center center;
   padding-top: 15rem;
@@ -20,9 +20,12 @@
   color: rgb(248, 249, 252);
   text-align: center;
   font-size: larger;
-  padding-top: 2rem;
   font-size: 32px;
-  padding: 30px;
+  padding: 3rem;
+}
+
+.dimensione-h1h2-rules{
+  font-size: 50px;
 }
 
 .container-rules-generale {
@@ -44,6 +47,7 @@
 
 .title-rules-h2{
   margin: 0;
+  margin-bottom: 1rem;
 }
 
 .container-squadra-img {
@@ -69,8 +73,8 @@
 }
 
 @media (max-width: 1024px) {
-  .color-rules {
-    font-size: 28px;
+  .dimensione-h1h2-rules {
+    font-size: 40px;
   }
 
   .container-squadra-img {
@@ -88,8 +92,8 @@
 }
 
 @media (max-width: 768px) {
-  .color-rules {
-    font-size: 25px;
+  .dimensione-h1h2-rules{
+    font-size: 30px;
   }
 
   .container-squadra-img {
@@ -109,8 +113,8 @@
 }
 
 @media (max-width: 600px) {
-  .color-rules {
-    font-size: 23px;
+  .dimensione-h1h2-rules {
+    font-size: 25px;
   }
 
   .flex-rules {
@@ -130,9 +134,6 @@
 }
 
 @media (max-width: 428px) {
-  .color-rules {
-    font-size: 23px;
-  }
 
   .flex-rules {
     display: flex;
