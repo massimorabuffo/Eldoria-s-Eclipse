@@ -1,9 +1,10 @@
+import Navbar from "./Components/NavBar";
 import { Footer } from "./Footer";
 
 export function Rules() {
   return (
     <>
-    
+    <Navbar />
     <div className="rules">
       <div className="img-rules"></div>
 

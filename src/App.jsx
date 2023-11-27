@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 import Login from "./Login"
 import { Home } from "./Components/Home.jsx";
 import { Adventure } from "./Components/Adventure.jsx";
@@ -18,27 +9,25 @@ import { About } from "./Components/About";
 import "./Style/App.css"
 import "./Home.css"
 import './style.css'
-  
-
+import { UserContext } from "./userContext.jsx";
+import { useContext } from "react";
 
 function App() {
+  const user = useContext(UserContext);
   return (
-
-
-    
     <>
-    <Navbar/>
+    <UserContext.Provider value={user}>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/:user/:id" element={<Game />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/:user/:id" element={<Home />} />
+        {/* <Route path="/home" element={<Home />} /> */}
         <Route path="/About" element={<About />} />
         <Route path="/Rules" element={<Rules/>} />
         <Route path="/adventure" element={<Adventure />} />
         <Route path="/game/:hero" element={<Game />} />
       </Routes>
+    </UserContext.Provider>
     </>
-      
   )
 }
 

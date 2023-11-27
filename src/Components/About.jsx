@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Navbar from "./NavBar";
 
 
 export function About() {
@@ -46,6 +47,7 @@ export function About() {
 
   return (
     <div>
+      <Navbar />
       <div className="nonloso">
         <img src="src\assets\images\0_RUSGLIjpQVY7kt4Y.jpg" alt="" />
       </div>

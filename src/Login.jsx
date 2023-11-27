@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { UserContext } from "./userContext";
+import { useContext } from "react";
 
 const Login = () => {
+    const user = useContext(UserContext);
     const navigate = useNavigate();
     const [data, setData] = useState({
         username: '',
@@ -51,28 +54,30 @@ const Login = () => {
     }, [counter])
 
     return (
-        <div className="form_container">
-            <div className="login_form">
-                <div className="form_title">
-                    <h1>Benvenuto a <br/>D&D Project</h1>
-                </div>
-                <form onSubmit={handleSubmit}>
-                    <div>Username</div>
-                    <input className={showError && "input_error"} required id='input_user' type="text" name='username' value={data.username} onChange={handleInputChange} placeholder="Username" />
-                    <div>Password</div>
-                    <input className={showError && "input_error"} required id="input_password" type="password" name='password' value={data.password} onChange={handleInputChange} placeholder="Password"/>
-                    {showError && <h3 className="error_message">Credenziali errate.</h3>}
-                    <div className="login_checkbox">
-                        <div>
-                            <input type="checkbox" id='remember' name='remember' checked={data.remember} onChange={handleInputChange} />
-                            <div>Ricordami</div>
-                        </div>
-                        <a href="#">Recupera credenziali</a>
+        <>
+            <div className="form_container">
+                <div className="login_form">
+                    <div className="form_title">
+                        <h1>Benvenuto a <br/>D&D Project</h1>
                     </div>
-                    <button disabled={!data.username || !data.password}>Login</button>
-                </form>
+                    <form onSubmit={handleSubmit}>
+                        <div>Username</div>
+                        <input className={showError && "input_error"} required id='input_user' type="text" name='username' value={data.username} onChange={handleInputChange} placeholder="Username" />
+                        <div>Password</div>
+                        <input className={showError && "input_error"} required id="input_password" type="password" name='password' value={data.password} onChange={handleInputChange} placeholder="Password"/>
+                        {showError && <h3 className="error_message">Credenziali errate.</h3>}
+                        <div className="login_checkbox">
+                            <div>
+                                <input type="checkbox" id='remember' name='remember' checked={data.remember} onChange={handleInputChange} />
+                                <div>Ricordami</div>
+                            </div>
+                            <a href="#">Recupera credenziali</a>
+                        </div>
+                        <button disabled={!data.username || !data.password}>Login</button>
+                    </form>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
