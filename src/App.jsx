@@ -9,14 +9,11 @@ import { About } from "./Components/About";
 import "./Style/App.css"
 import "./Home.css"
 import './style.css'
-import { UserContext } from "./userContext.jsx";
-import { useContext } from "react";
 
 function App() {
-  const user = useContext(UserContext);
   return (
     <>
-    <UserContext.Provider value={user}>
+
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/:user/:id" element={<Home />} />
@@ -26,7 +23,6 @@ function App() {
         <Route path="/adventure" element={<Adventure />} />
         <Route path="/game/:hero" element={<Game />} />
       </Routes>
-    </UserContext.Provider>
     </>
   )
 }

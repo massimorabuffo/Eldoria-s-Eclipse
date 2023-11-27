@@ -1,12 +1,10 @@
-import { useContext, useState } from "react"
+import { useState } from "react"
 import "./Adventure"
 import { Outlet, useNavigate } from "react-router-dom"
 import Navbar from "./NavBar"
-import { UserContext } from "../userContext"
 
 export function Home() {
     const [hidden, setHidden] = useState()
-    const user = useContext(UserContext);
     const navigate = useNavigate()
 
     function startAdventure() {

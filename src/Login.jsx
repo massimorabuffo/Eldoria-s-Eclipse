@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { UserContext } from "./userContext";
-import { useContext } from "react";
+import { useUserContext } from "./userContext";
 
 const Login = () => {
-    const user = useContext(UserContext);
     const navigate = useNavigate();
     const [data, setData] = useState({
         username: '',
