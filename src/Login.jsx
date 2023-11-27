@@ -11,6 +11,7 @@ const Login = () => {
     })
     const [counter, setCounter] = useState(0);
     const [showError, setShowError] = useState(false);
+    const {user, setUser} = useUserContext();
 
     const handleInputChange = (event) => {
         const name = event.target.name;
@@ -34,6 +35,7 @@ const Login = () => {
             const dataJson = await response.json();
             dataJson.map(el => {
                 if(el.name === data.username && el.password === data.password){
+                    setUser(data);
                     navigate(`/${el.name}/${el.id}`);
                 } else{
                     setShowError(true);

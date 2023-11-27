@@ -1,12 +1,14 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Dice from "./Dice";
+import { useUserContext } from "../userContext";
 
 function Navbar() {
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const toggleSidebar = () => {
     setSidebarVisible(!sidebarVisible);
   };
+  const {user} = useUserContext();
 
   return (
     <nav className="navbar">
@@ -30,6 +32,7 @@ function Navbar() {
           </button>
         </li>
 
+        <div>Utente: {user.username}</div>
         <li className="List-Nav">
           <button>
             <Link className="Tab" to={`/:user/:id`}>
