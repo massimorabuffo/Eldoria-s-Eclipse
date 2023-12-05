@@ -7,7 +7,7 @@ export function Adventure() {
 
     useEffect(() => {
         if (hero) {
-          navigate(`/game/${hero}`);
+          navigate(`/gametry/${hero}`);
         }
       }, [hero, navigate]); 
 
@@ -39,20 +39,20 @@ export function Adventure() {
                         <p>
                             Due avventurieri coraggiosi si metteranno a rischio per salvare l'umanità.
                         </p>
-                        <h2>Scegli il tuo eroe:</h2>
+                        <h2 className="text-adventure-h2">Scegli il tuo eroe</h2>
                     </div>
                 </div>
                 <div className="container-card-adventure">
                     <div className='card-adventure' id='paladin' onClick={() => choosedHero('paladin')}>
                         <div className="character-img">
-                            <img src="/paladinoImg.jpg" />
+                            <img src="..\src\assets\dnd-paladin-dice-symbol.jpg" />
                         </div>
                         <div className="text-card">
                             <div className="characters-name">
-                                <h2>Eldrin</h2>
+                                <p>Eldrin</p>
                             </div>
                             <div className="characters-nickname">
-                                <h3>Il Cavaliere Luminoso</h3>
+                                <p>Il Cavaliere Luminoso</p>
                             </div>
                             <div className="characters-description">
                                 <h3>Umano - Paladino</h3>
@@ -62,14 +62,14 @@ export function Adventure() {
                     </div>
                     <div className='card-adventure' id="mage" onClick={() => choosedHero('mage')}>
                         <div className="character-img">
-                            <img src="/Elf-Female-Mage.jpg" />
+                            <img src="src\assets\dnd-mage-symbol.jpg" />
                         </div>
                         <div className="text-card">
                             <div className="characters-name">
-                                <h2>Lyra</h2>
+                                <p>Lyra</p>
                             </div>
                             <div className="characters-nickname">
-                                <h3>La Strega delle fiamme</h3>
+                                <p>La Strega delle fiamme</p>
                             </div>
                             <div className="characters-description">
                                 <h3>Elfo - Mago</h3>

@@ -1,6 +1,7 @@
 :root{
     --clr-bg-question: #7e0004;
     --clr-main: #cfb000;
+    --clr-bg-container-game: rgb(188, 158, 122); 
     --clr-answer: #ffffff;
     --clr-bg-answer: #1f1f1f;
     --clr-bg-main: #1f1f1fd3;
@@ -16,4 +17,4 @@
 *{
     font-family: 'MedievalSharp';
     
-} 
+}

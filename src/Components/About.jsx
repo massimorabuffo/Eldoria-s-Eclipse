@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Navbar from "./NavBar";
 
 
 export function About() {

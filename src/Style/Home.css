@@ -1,12 +1,12 @@
-
-
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     display: none;
 }
-.active{
+
+.active {
     display: block;
 }
-.disactive{
+
+.disactive {
     display: none;
 }
 
@@ -24,21 +24,21 @@ body::-webkit-scrollbar{
     display: flex;
     justify-content: center;
 }
-
 .background-home > h1{
     margin-top: 5rem;
     color: white;
     font-size: 5rem;
 }
-
-.background-home::-webkit-scrollbar{
+.background-home::-webkit-scrollbar {
     display: none;
 }
-.background-home>img{
+
+.background-home>img {
     width: 100vw;
     height: 45vw;
 }
-.container-sword-svg{
+
+.container-sword-svg {
     position: absolute;
     top: 13.5vw;
     left: 38vw;
@@ -47,94 +47,117 @@ body::-webkit-scrollbar{
     display: flex;
     justify-content: center;
 }
-.container-sword-svg>img{
+
+.container-sword-svg>img {
     width: 100%;
     height: 100%;
 }
 
-.container-start-button{
-    position: absolute;
-    top: 23vw;
-}
-.start-button{
-    cursor: pointer;
-    border-radius: 20px;
-    border: 3px solid black;
-    padding: 10px;
-    background-color: #6a0000;
-    color: black;
-    height: 70px;
-    box-shadow: 0px 15px 4px rgba(0, 0, 0, 0.4)
-}
+
+
 /* SEZIONE DELL AVVENTURA */
 
 
-.wrapper-adventure{
+.wrapper-adventure {
     /* background-color: rgb(189, 131, 59); */
     background: linear-gradient(to top, #5c0e0e 5%, #600808 40%, #321c0d 100%);
     display: flex;
     justify-content: center;
     text-align: start;
 }
-.container-adventure{
-    background-color: rgb(188, 158, 122); 
+
+.container-adventure {
+    background-color: rgb(188, 158, 122);
     width: 75%;
 }
-.container-text-adventure{
+
+.container-text-adventure {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
-.text-adventure{
-    margin: 10px 0px;
-    width: 80%;
+
+.text-adventure {
+    margin: 14px 0px;
+    width: 85%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     margin-bottom: 20px;
 }
-.text-adventure>p{
+
+.text-adventure>p {
     font-size: 20px;
-    font-weight:bold;
+    font-weight: bold;
     color: #000000;
 }
-.container-card-adventure{
-    display: flex;
-    justify-content: space-evenly;
-}
-.card-adventure{
-    cursor: pointer;
-    border: 5px solid black;
-    border-radius: 40px;
-    height: 100%;
-    width: 300px;
-    background-color: rgb(168, 137, 111);
-    box-shadow: 18px 18px 4px rgba(0, 0, 0, 0.3)
+
+.text-adventure-h2 {
+    text-align: center;
+    font-size: 45px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #000000;
 }
 
-.character-img>img{
+.container-card-adventure {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+
+}
+
+.card-adventure {
+    cursor: pointer;
+    border: 4px solid black;
+    border-radius: 40px;
+    height: 100%;
+    width: 295px;
+    background-color: rgb(168, 137, 111);
+    box-shadow: 12px 16px 11px 2px rgba(0, 0, 0, 0.3)
+}
+
+.card-adventure:hover {
+    border-color: #920c0c;
+    filter: brightness(80%);
+    margin-top: 5px;
+}
+
+.character-img>img {
     border-top-right-radius: 36px;
     border-top-left-radius: 36px;
-    height: 400px;
+    height: 360px;
     width: 100%;
 }
-.text-card{
-    margin-bottom: 10px;
+
+.text-card {
+    margin-bottom: 4px;
     padding: 5px;
     display: flex;
     text-align: center;
     flex-direction: column;
 }
-.characters-name{
+
+.characters-name>p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #131212;
+}
+
+.characters-nickname>p {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.characters-description>h3 {
     font-size: 20px;
+    font-weight: bold;
 }
-.characters-nickname{
-    margin-bottom: 10px;
-}
-.characters-description{
-    font-size: 13px;
-}
-.container-hero{
+
+.container-hero {
     width: 80%;
     margin-bottom: 20px;
 }
@@ -148,7 +171,7 @@ body::-webkit-scrollbar{
 
 
 
-.wrapper-game{
+.wrapper-game {
     background: linear-gradient(to top, #5c0e0e 5%, #600808 40%, #321c0d 100%);
     display: flex;
     justify-content: center;
@@ -156,52 +179,414 @@ body::-webkit-scrollbar{
     height: max-content;
     padding-bottom: 20px;
 }
-.container-game{
-    background-color: rgb(188, 158, 122); 
+
+.container-game {
+    background-color: var(--clr-bg-container-game);
     width: 75%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.container-text-game{
+
+.container-text-game {
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.text-game{
-    font-size: 22px;
+
+.text-game {
+    font-size: 20px;
+    font-weight: 700;
     margin: 10px 0px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
-.container-hero{
+
+.container-hero {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+
 /* BOTTONI */
 
-.container-continue-button{
+
+.container-start-button {
+    position: absolute;
+    top: 23vw;
+}
+
+.start-button {
     cursor: pointer;
-    width: 80%;
+    border-radius: 20px;
+    border: 3px solid rgb(10, 10, 10);
+    padding: 10px;
+    background-color: #920c0c;
+    color: black;
+    height: 70px;
+    box-shadow: 0px 15px 4px rgba(0, 0, 0, 0.4);
+}
+
+.container-continue-button {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 15px;
 }
-.button-continue{
+
+.button-continue {
+    background-color: #f9f9f9c6;
+    font-weight: 800;
+    border: 3px solid black;
     border-radius: 4px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 150px;
-    height: 35px;
+    height: 45px;
     margin: 10px;
     padding: 10px;
+    transition: border-color 0.5s;
+    box-shadow: 8px 8px 10px 5px rgb(0 0 0 / 40%);
+}
+
+.button-continue:hover {
+    border-color: #920c0c;
+    background-color: #f9f9f98a;
+    margin-top: 13px;
+
+}
+
+@media screen and (max-width: 430px) {
+
+    /* HOME */
+    .background-home{
+        background-image: url("../assets/images/Skyrim-Oblivion-dragon.webp");
+        background-repeat:no-repeat;
+        background-size: cover;
+        filter: brightness(80%);
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .background-home > h1{
+        margin-top: 5rem;
+        color: white;
+        font-size: 5rem;
+    }
+    /* SVG */
+
+
+    .container-sword-svg {
+        display: none;
+    }
+
+    /* CARD */
+
+
+
+    .container-card-adventure {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 25px;
+        gap: 20px;
+    }
+
+    .card-adventure {
+        cursor: pointer;
+        border: 4px solid black;
+        border-radius: 40px;
+        height: fit-content;
+        width: 230px;
+        background-color: rgb(168, 137, 111);
+        box-shadow: 12px 16px 11px 2px rgba(0, 0, 0, 0.3)
+    }
+
+    .character-img>img {
+        border-top-right-radius: 36px;
+        border-top-left-radius: 36px;
+        height: 270px;
+        width: 100%;
+    }
+
+    .text-card {
+        margin-bottom: 4px;
+        padding: 15px 10px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .characters-name>p {
+        font-size: 30px;
+        font-weight: bold;
+        color: #131212;
+    }
+
+    .characters-nickname>p {
+        margin-bottom: 6px;
+        font-size: 24px;
+        font-weight: 800;
+        color: #532020;
+    }
+
+
+    /* BOTTONI */
+
+    .container-start-button {
+        position: absolute;
+    }
+
+    .start-button {
+        cursor: pointer;
+        border-radius: 20px;
+        border: 3px solid rgb(10, 10, 10);
+        padding: 8px;
+        background-color: #920c0c;
+        color: black;
+        height: 70px;
+        box-shadow: 0px 15px 4px rgba(0, 0, 0, 0.4);
+        font-weight: bold;
+    }
+
+    .container-continue-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .button-continue {
+        background-color: #f9f9f9c6;
+        font-weight: 800;
+        border: 3px solid black;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 150px;
+        height: fit-content;
+        margin: 10px;
+        padding: 10px;
+        transition: border-color 0.5s;
+        box-shadow: 8px 8px 10px 5px rgb(0 0 0 / 40%);
+    }
+
+    /* GAME */
+
+    .wrapper-game {
+        background: linear-gradient(to top, #5c0e0e 5%, #600808 40%, #321c0d 100%);
+        display: flex;
+        justify-content: center;
+        height: max-content;
+        padding-bottom: 20px;
+        max-height: max-content;
+    }
+
+    .container-game {
+        background-color: var(--clr-bg-container-game);
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px 15px;
+    }
+
+    .container-text-game {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 5px;
+    }
+
+    .text-game {
+        font-size: 20px;
+        font-weight: 700;
+        padding: 0px 15px;
+        margin: 10px 0px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    /* HOME */
+    .background-home{
+        background-image: url("../assets/images/Skyrim-Oblivion-dragon.webp");
+        background-repeat:no-repeat;
+        background-size: cover;
+        filter: brightness(80%);
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .background-home > h1{
+        margin-top: 5rem;
+        color: white;
+        font-size: 5rem;
+    }
+    /* SVG */
+
+
+    .container-sword-svg {
+        display: none;
+    }
+
+    /* CARD */
+
+
+
+    .container-card-adventure {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 25px;
+        gap: 20px;
+    }
+
+    .card-adventure {
+        margin-top: 10px;
+        cursor: pointer;
+        border: 4px solid black;
+        border-radius: 40px;
+        height: fit-content;
+        width: 270px;
+        background-color: rgb(168, 137, 111);
+        box-shadow: 12px 16px 11px 2px rgba(0, 0, 0, 0.3)
+    }
+    .character-img{
+        background-color: white;
+        border-top-right-radius: 36px;
+        border-top-left-radius: 36px;
+    }
+    .character-img>img {
+        border-top-right-radius: 36px;
+        border-top-left-radius: 36px;
+        height: 270px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .text-card {
+        margin-bottom: 4px;
+        padding: 15px 10px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .characters-name>p {
+        font-size: 30px;
+        font-weight: bold;
+        color: #131212;
+    }
+
+    .characters-nickname>p {
+        margin-bottom: 6px;
+        font-size: 24px;
+        font-weight: 800;
+        color: #532020;
+    }
+
+
+    /* BOTTONI */
+
+    .container-start-button {
+        position: absolute;
+    }
+
+    .start-button {
+        cursor: pointer;
+        border-radius: 20px;
+        border: 3px solid rgb(10, 10, 10);
+        padding: 8px;
+        background-color: #920c0c;
+        color: black;
+        height: 70px;
+        box-shadow: 0px 15px 4px rgba(0, 0, 0, 0.4);
+        font-weight: bold;
+    }
+
+    .container-continue-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .button-continue {
+        background-color: #f9f9f9c6;
+        font-weight: 800;
+        border: 3px solid black;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 150px;
+        height: fit-content;
+        margin: 10px;
+        padding: 10px;
+        transition: border-color 0.5s;
+        box-shadow: 8px 8px 10px 5px rgb(0 0 0 / 40%);
+    }
+
+    /* GAME */
+
+    .wrapper-game {
+        background: linear-gradient(to top, #5c0e0e 5%, #600808 40%, #321c0d 100%);
+        display: flex;
+        justify-content: center;
+        height: max-content;
+        padding-bottom: 20px;
+        max-height: max-content;
+    }
+
+    .container-game {
+        background-color: var(--clr-bg-container-game);
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px 15px;
+    }
+
+    .container-text-game {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 5px;
+    }
+
+    .text-game {
+        font-size: 20px;
+        font-weight: 700;
+        padding: 0px 15px;
+        margin: 10px 0px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
 }

@@ -1,167 +1,186 @@
-
 .nonloso > img{
-    height: fit-content;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
+  height: fit-content;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
 }
 
 .nonloso > h1{
-  color: var(--clr-main);
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  z-index: 1;
-  transform: translate(-50%, -50%);
-}
-
-.titolo-about{
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
+color: var(--clr-main);
+position: absolute;
+top: 20%;
+left: 50%;
+z-index: 1;
+transform: translate(-50%, -50%);
 }
 
 .wrapper-accordion{
-  background-color: var(--clr-bg-main);
-  border: 2px solid var(--clr-main);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 700px;
-  width: 1000px;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+background-color: var(--clr-bg-main);
+border: 2px solid var(--clr-main);
+position: absolute;
+top: 80%;
+left: 50%;
+height: 50rem;
+width: 62.5rem;
+transform: translate(-50%, -50%);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 .wrapper-accordion > h1{
-  color: var(--clr-main);
-  margin-bottom: 25px;
+color: var(--clr-main);
+font-size: 30px;
+margin-bottom: 25px;
 }
 
 .accordion{
-  width: 800px;
+width: 50rem;
 }
 
 .container{
-  margin-bottom: 30px;
+margin-bottom: 30px;
 }
 
 .question{
-  background-color: var(--clr-bg-question);
-  border: 1px solid var(--clr-main);
-  color: var(--clr-main);
-  padding: 1rem;
-  display: flex; 
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
+background-color: var(--clr-bg-question);
+border: 1px solid var(--clr-main);
+color: var(--clr-main);
+padding: 1rem;
+display: flex; 
+justify-content: space-between;
+align-items: center;
+cursor: pointer;
+}
+
+.question > h2{
+font-size: 27px;
 }
 
 #arrow-down{
-  font-size: 25px;
-  fill: var(--clr-main);
+font-size: 30px;
+fill: var(--clr-main);
 }
 
 .answer{
-  color: var(--clr-answer);
-  background-color: var(--clr-bg-answer);
-  max-height: 0px;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0, 1, 0, 1);
+color: var(--clr-answer);
+background-color: var(--clr-bg-answer);
+max-height: 0px;
+overflow: hidden;
+transition: all 0.3s cubic-bezier(0, 1, 0, 1);
 }
 
 .answer.show{
-  height: auto;
-  max-height: 999px;
-  padding: 1rem;
-  font-size: 20px;
-  transition: all 0.3s cubic-bezier(1, 0, 1, 0);
+height: auto;
+max-height: 999px;
+padding: 1rem;
+font-size: 20px;
+transition: all 0.3s cubic-bezier(1, 0, 1, 0);
 }
 
 @media screen and (max-width: 1024px) {
-  .nonloso > img{
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
-  }
+.nonloso > img{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
 
-  .wrapper-accordion{
-    height: 500px;
-    width: 600px;
-  }
+.wrapper-accordion{
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 42rem;
+  width: 37.5rem;
+}
 
-  .accordion{
-    width: 500px;
-  }
-  
-  .container{
-    margin-bottom: 15px;
-  }
+.wrapper-accordion > h1{
+  font-size: 25px;
+}
 
-  .answer.show{
-    font-size: 15px
-  }
+.accordion{
+  width: 31.25rem;
+}
+
+.container{
+  margin-bottom: 15px;
+}
+
+.question > h2{
+  font-size: 20px;
+}
+
+.answer.show{
+  font-size: 15px
+}
 }
 
 @media screen and (max-width: 768px) {
-  .nonloso > img{
-    height: 100svh;
-    width: 100%;
-    object-fit: cover;
-  }
+.nonloso > img{
+  height: 100svh;
+  width: 100%;
+  object-fit: cover;
+}
 
-  .wrapper-accordion{
-    height: 630px;
-    width: 500px;
-  }
+.wrapper-accordion{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40rem;
+  width: 31.25rem;
+}
 
-  .accordion{
-    width: 300px;
-  }
+.accordion{
+  width: 18.75rem;
+}
 
-  .container{
-    margin-bottom: 15px;
-  }
+.container{
+  margin-bottom: 15px;
+}
 
-  .question{
-    font-size: 13px;
-  }
+.question{
+  padding: .5rem;
+}
 
-  .answer.show{
-    font-size: 13px;
-  }
+.question > h2{
+  font-size: 15px;
+}
+
+#arrow-down{
+  font-size: 20px;
+}
+
+.answer.show{
+  font-size: 13px;
+}
 }
 
 @media screen and (max-width: 425px) {
 
-  .nonloso > img{
-    object-fit: cover;
-    height: 100vh;
-  }
+.nonloso > img{
+  object-fit: cover;
+  height: 100vh;
+}
 
-  .wrapper-accordion{
-    width: 400px;
-    height: 600px;
-  }
+.wrapper-accordion{
+  width: 25rem;
+  height: 39rem;
+}
 
-  .accordion{
-    width: 250px;
-  }
+.accordion{
+  width: 15.625rem;
+}
 
-  .container{
-    margin-bottom: 10px;
-  }
+.container{
+  margin-bottom: 10px;
+}
 
-  .question{
-    font-size: 12px;
-  }
+.question{
+  font-size: 12px;
+}
 
-  .answer.show{
-    font-size: 12px;
-  }
+.answer.show{
+  font-size: 12px;
+}
 }
