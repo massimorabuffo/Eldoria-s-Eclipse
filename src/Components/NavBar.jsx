@@ -1,72 +1,74 @@
-import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Dice from "./Dice";
-import { useUserContext } from "../userContext";
 
-function Navbar() {
-  const [sidebarVisible, setSidebarVisible] = useState(false);
-  const toggleSidebar = () => {
-    setSidebarVisible(!sidebarVisible);
-  };
-  const {user} = useUserContext();
+function Navbar( {onOpenSideBar, sidebarVisible}) {
 
-  if (location.pathname === '/') {
-    return null;
-  }else{
-    return (
-      <nav className="navbar">
-        <div className={`sidebar ${sidebarVisible ? "visible" : ""}`}>
-          <form className="form-side">
-            <input className="NickName" type="text" placeholder="Nick-Name" />
-            <button className="Gioca-Ora" type="submit">
-              Nuova Partita
-            </button>
-          </form>
-        </div>
-        <ul className="nav-container">
-          <li className="List-Nav">
-            <button className="" onClick={toggleSidebar}>
-              <img
-                className="Omino"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/2048px-Hamburger_icon_white.svg.png"
-                alt=""
-              />
-              <h3 style={{ color: "white" }}></h3>
-            </button>
-          </li>
-          <li className="List-Nav">
-            <button>
-              <Link className="Tab" to={`/:user/:id`}>
-                Home
-              </Link>
-            </button>
-          </li>
-          <li className="List-Nav">
-            <div className="dice" id="animated-dice">
-              <Dice />
-            </div>
-          </li>
-          <li className="List-Nav">
-            <h2 className="Title">Dragons</h2>
-          </li>
-          <li className="List-Nav">
-            <button>
-              <Link className="Tab" to="/About">
-                About
-              </Link>
-            </button>
-          </li>
-          <li className="List-Nav">
-            <button>
-              <Link className="Tab" to="/Rules">
-                Rules
-              </Link>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    );
-  }
+  return (
+    <nav className="navbar">
+     
+     {!sidebarVisible &&
+          <div class="menu-icon-hamburger" onClick={onOpenSideBar}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      }
+
+      <li className="List-Nav-Flex-Mobile">
+          <div className="dice" id="animated-dice">
+            <Dice />
+          </div>
+          <h2 className="Title">Dragons</h2>
+        </li>
+
+
+
+
+      <ul className="nav-container">
+
+
+        <li className="List-Nav ">
+        <button>
+            <Link className="Tab" to="/">
+              Logout
+            </Link>
+          </button>
+        </li>
+
+        <li className="List-Nav">
+          <button>
+            <Link className="Tab" to="/:user/:id">
+              Home
+            </Link>
+          </button>
+        </li>
+
+        <li className="List-Nav-Flex">
+          <div className="dice" id="animated-dice">
+            <Dice />
+          </div>
+          <h2 className="Title">Dragons</h2>
+        </li>
+
+        <li className="List-Nav">
+          <button>
+            <Link className="Tab" to="/About">
+              About
+            </Link>
+          </button>
+        </li>
+        <li className="List-Nav">
+          <button>
+            <Link className="Tab" to="/Rules">
+              Rules
+            </Link>
+          </button>
+        </li>
+      </ul>
+
+    </nav>
+  );
 }
 
 export default Navbar;
