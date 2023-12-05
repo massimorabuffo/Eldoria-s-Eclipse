@@ -1,0 +1,189 @@
+.form_container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/login_dragon_background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 3.3rem 2rem 3.3rem;
+    width: 35vw;
+    height: 55vh;
+    background-color: rgba(31, 31, 31, 0.875);
+    outline: 3px solid rgb(217, 184, 0);
+}
+
+.form_title{
+    text-align: center;
+    color: rgb(217, 184, 0);
+    font-size: 2.5rem;
+}
+
+.login_form form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    color: rgb(217, 184, 0);
+}
+
+#input_password{
+    margin-bottom: 0.5rem;
+    padding-left: 0.3rem;
+}
+#input_user{
+    padding-left: 0.3rem;
+}
+
+.login_form form input{
+    height: 35px;
+    width: 100%;
+}
+
+.input_error{
+    border-color: rgb(255, 0, 0);
+}
+
+.error_message{
+    margin: 0;
+    color: rgb(255, 0, 0);
+}
+
+.login_checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.login_checkbox .remember{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.remember > div{
+   padding-top: 6px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+#signup_button{
+    width: 12vw;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    color: rgb(217, 184, 0);
+    font-size: 18px;
+    font-weight: 400;
+    text-shadow: 0 1px 3px #000;
+    text-align: center;
+    padding: 10px 0;
+    background: radial-gradient(circle, #8b0000, #8b0000);
+    box-shadow: inset 0px 0px 5px 3px rgba(1,1,1,0.3);
+}
+
+#signup_button:hover{
+    background: radial-gradient(circle, #e52b2b, #8b0000);
+    box-shadow: 0px 0 5px 5px rgba(255,255,255,0.2)
+}
+  
+#signup_button:active{
+    background: radial-gradient(circle, #ec6a6a, #e52b2b);
+    box-shadow: 0px 0 5px 5px rgba(255,255,255,0.2)
+}
+
+#login_button{
+    width: 12vw;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    color: rgb(217, 184, 0);
+    font-size: 18px;
+    font-weight: 400;
+    text-shadow: 0 1px 3px #000;
+    text-align: center;
+    padding: 10px 0;
+    background: radial-gradient(circle, #8b0000, #8b0000);
+    box-shadow: inset 0px 0px 5px 3px rgba(1,1,1,0.3);
+}
+
+#login_button:hover{
+    background: radial-gradient(circle, #e52b2b, #8b0000);
+    box-shadow: 0px 0 5px 5px rgba(255,255,255,0.2)
+}
+  
+#login_button:active{
+    background: radial-gradient(circle, #ec6a6a, #e52b2b);
+    box-shadow: 0px 0 5px 5px rgba(255,255,255,0.2)
+}
+
+@media screen and (max-width: 768px){
+    .login_form{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 50vw;
+        height: 35vh;
+    }
+    #signup_button{
+        width: 15vw;
+    }
+    #login_button{
+        width: 15vw;
+    }
+}
+
+@media screen and (max-width: 426px){
+    .login_form{
+        width: 70vw;
+        /* height: 40vh; */
+    }
+    #signup_button{
+        width: 25vw;
+    }
+    #login_button{
+        width: 25vw;
+    }
+}
+
+@media screen and (max-width: 376px){
+    .login_form{
+        height: 60vh;
+        width: 90vw;
+    }
+    #signup_button{
+        width: 30vw;
+    }
+    #login_button{
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 320px){
+    #signup_button{
+        width: 35vw;
+    }
+    #login_button{
+        width: 35vw;
+    }
+    .buttons{
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (max-height: 650px){
+    .login_form{
+        height: 70vh;
+    }
+}

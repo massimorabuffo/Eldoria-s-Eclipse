@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Character } from "./Character"
 import { useNavigate } from "react-router-dom"
 
 export function Adventure() {

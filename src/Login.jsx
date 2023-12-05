@@ -62,22 +62,22 @@ const Login = () => {
             if(el.name === data.username){
                 control = true;
             }})
-            if(control){
-                alert(`Errore: l'utente "${data.username}" risulta già registrato.`)
-            }else{
-                fetch("http://localhost:3000/users", {
-                    method: 'POST',
-                    headers: {
-                       'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                       'id': dbData.id + 1, 
-                       'name': data.username,
-                       'password': data.password
-                    })
-                }).then(response => console.log(response.json().length))
-                .then(alert(`Utente "${data.username}" registrato correttamente. Ora puoi effettuare il login!`))
-            }
+        if(control){
+            alert(`Errore: l'utente "${data.username}" risulta già registrato.`);
+        }else{
+            fetch("http://localhost:3000/users", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    'id': dbData.id + 1, 
+                    'name': data.username,
+                    'password': data.password
+                })
+            }).then(response => console.log(response.json().length))
+            .then(alert(`Utente "${data.username}" registrato correttamente. Ora puoi effettuare il login!`))
+        }
     }
 
     useEffect(() => {
@@ -100,9 +100,7 @@ const Login = () => {
         <>
             <div className="form_container">
                 <div className="login_form">
-                    <div className="form_title">
-                        <h1>Benvenuto a <br/>D&D Project</h1>
-                    </div>
+                    <h1 className="form_title">Benvenuto a <br/>Eldoria's Eclipse!</h1>
                     <form onSubmit={handleSubmit}>
                         <div>Username</div>
                         <input className={showError && "input_error"} required id='input_user' type="text" name='username' value={data.username} onChange={handleInputChange} placeholder="Username" />
@@ -114,9 +112,11 @@ const Login = () => {
                                 <input type="checkbox" id='remember' name='remember' checked={data.remember} onChange={handleInputChange} />
                                 <div>Ricordami</div>
                             </div>
-                            <button onClick={handleRegistration} disabled={!data.username || !data.password}>Registrati</button>
                         </div>
-                        <button id="login_button" disabled={!data.username || !data.password}>Login</button>
+                        <div className="buttons">
+                            <button id="login_button" disabled={!data.username || !data.password}>Login</button>
+                            <button id="signup_button" onClick={handleRegistration} disabled={!data.username || !data.password}>Registrati</button>
+                        </div>
                     </form>
                 </div>
             </div>

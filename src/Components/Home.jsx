@@ -1,11 +1,12 @@
 import { useState } from "react"
 import "./Adventure"
 import { Outlet, useNavigate } from "react-router-dom"
-import Navbar from "./NavBar"
+import { useUserContext } from "../userContext"
 
 export function Home() {
     const [hidden, setHidden] = useState()
     const navigate = useNavigate()
+    const {user} = useUserContext();
 
     function startAdventure() {
         setHidden((item) => !item)
@@ -14,7 +15,7 @@ export function Home() {
     return (
         <>
             <div className="background-home">
-                <img src="../src/assets/dragon_gif.gif" alt="drago" />
+                <h1>Bentornato, {user.username}!</h1>
                 <div className="container-sword-svg">
                     <img src='../src/assets\swords-svg.png'/>
                 </div>
