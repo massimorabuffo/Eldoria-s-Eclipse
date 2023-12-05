@@ -13,6 +13,7 @@ const Login = () => {
     const [showError, setShowError] = useState(false);
     const {user, setUser} = useUserContext();
     const [dbData, setDbData] = useState(0);
+    const [registerHandler, setRegisterHandler] = useState(false);
 
     const handleInputChange = (event) => {
         const name = event.target.name;
@@ -80,6 +81,10 @@ const Login = () => {
         }
     }
 
+    const handleShowRegisterButton = () => {
+        setRegisterHandler(p => !p);
+    }
+
     useEffect(() => {
         try{
             fetchRemoteData();
@@ -107,15 +112,17 @@ const Login = () => {
                         <div>Password</div>
                         <input className={showError && "input_error"} required id="input_password" type="password" name='password' value={data.password} onChange={handleInputChange} placeholder="Password"/>
                         {showError && <h3 className="error_message">Credenziali errate.</h3>}
-                        <div className="login_checkbox">
-                            <div className="remember">
+                        <div className="registration_handler">
+                            {registerHandler ? <div onClick={handleShowRegisterButton}>Hai già un account? Accedi</div> : 
+                                <div onClick={handleShowRegisterButton}>Non hai un account? Registrati</div>}
+                            {/* <div className="remember">
                                 <input type="checkbox" id='remember' name='remember' checked={data.remember} onChange={handleInputChange} />
                                 <div>Ricordami</div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="buttons">
-                            <button id="login_button" disabled={!data.username || !data.password}>Login</button>
-                            <button id="signup_button" onClick={handleRegistration} disabled={!data.username || !data.password}>Registrati</button>
+                            {!registerHandler && <button id="login_button" disabled={!data.username || !data.password}>Login</button> }
+                            {registerHandler && <button id="signup_button" onClick={handleRegistration} disabled={!data.username || !data.password}>Registrati</button> }
                         </div>
                     </form>
                 </div>

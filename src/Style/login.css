@@ -56,17 +56,15 @@
     color: rgb(255, 0, 0);
 }
 
-.login_checkbox{
+.registration_handler{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.login_checkbox .remember{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 0.3rem;
+.registration_handler:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .remember > div{
