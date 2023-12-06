@@ -9,10 +9,9 @@ const Login = () => {
         password: '',
         remember: false,
     })
-    const [counter, setCounter] = useState(0);
     const [showError, setShowError] = useState(false);
     const {user, setUser} = useUserContext();
-    const [dbData, setDbData] = useState(0);
+    const [dbData, setDbData] = useState({});
     const [registerHandler, setRegisterHandler] = useState(false);
 
     const handleInputChange = (event) => {
@@ -29,6 +28,8 @@ const Login = () => {
         })
     }
 
+    // Prima chiamata fetch al server, serve ad ottenere e salvare nello state "dbData" i dati degi utenti nel database, in modo da poterne conoscere la lunghezza e poter controllare se un'utente esiste già.
+
     const fetchRemoteData = () => {
         const fetchData = async () => {
             const response = await fetch("http://localhost:3000/users");
@@ -38,9 +39,10 @@ const Login = () => {
         fetchData();
     }
 
+    // Funzione che gestisce il submit da parte dell'utente, controlla se le credenziali coincidono con quelle nel database remoto e, se si, sfrutta lo useNavigate per far visualizzare il componente Home.
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        setCounter(prev => prev++);
         const fetchData = async () => {
             const response = await fetch("http://localhost:3000/users");
             const dataJson = await response.json();
@@ -55,6 +57,9 @@ const Login = () => {
         }
         fetchData();
     }
+
+    // Funzione che viene triggherata al click del button "registarti". Esegue un controllo per verificare la presenza delle credenziali inserite dall'utente nel database, e in caso affermativo mostra un alert di errore.
+    // Dopo il controllo, esegue la registrazione del nuovo utente nel database, tramite una chiamata fetch con method 'POST'.
 
     const handleRegistration = (event) => {
         event.preventDefault();
@@ -72,14 +77,15 @@ const Login = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    'id': dbData.id + 1, 
+                    'id': dbData.length + 1, // Qui viene sfruttato lo state "dbData" (con le info degli utenti in database) per creare un numero di ID sempre progressivo.
                     'name': data.username,
                     'password': data.password
                 })
-            }).then(response => console.log(response.json().length))
-            .then(alert(`Utente "${data.username}" registrato correttamente. Ora puoi effettuare il login!`))
+            }).then(alert(`Utente "${data.username}" registrato correttamente. Ora puoi effettuare il login!`))
         }
     }
+
+    // Funzione che gestisce lo switch tra i button Login/Registrati (lo state registerHandler viene richiamato nell'operatore ternario a riga 115).
 
     const handleShowRegisterButton = () => {
         setRegisterHandler(p => !p);
@@ -88,18 +94,11 @@ const Login = () => {
     useEffect(() => {
         try{
             fetchRemoteData();
-        }catch(error){
-            console.error(error);
-        }
-    }, [])
-
-    useEffect(() => {
-        try{
             handleSubmit();
         } catch(error){
             console.error(error);
         }
-    }, [counter])
+    }, [user]) // Nell'array di dipendenza viene sfruttato lo state "user" che viene aggiornato ogni volta che viene richiamata la funzione "handleSubmit".
 
     return (
         <>

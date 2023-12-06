@@ -14,31 +14,6 @@
       "id": 3,
       "name": "Francesco",
       "password": "1234"
-    },
-    {
-      "id": 4,
-      "name": "ciccio",
-      "password": "1234"
-    },
-    {
-      "id": 5,
-      "name": "ciao",
-      "password": "324"
-    },
-    {
-      "id": 6,
-      "name": "pippo",
-      "password": "1234"
-    },
-    {
-      "id": 7,
-      "name": "pippo",
-      "password": "1234"
-    },
-    {
-      "id": 8,
-      "name": "massimo2",
-      "password": "12345"
     }
   ]
 }
