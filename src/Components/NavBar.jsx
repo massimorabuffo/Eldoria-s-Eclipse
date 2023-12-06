@@ -7,7 +7,7 @@ function Navbar( {onOpenSideBar, sidebarVisible}) {
     <nav className="navbar">
      
      {!sidebarVisible &&
-          <div class="menu-icon-hamburger" onClick={onOpenSideBar}>
+          <div className="menu-icon-hamburger" onClick={onOpenSideBar}>
             <span></span>
             <span></span>
             <span></span>

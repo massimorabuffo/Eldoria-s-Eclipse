@@ -153,7 +153,7 @@ const storyArrayPaladin = [
         goTo: 13,
         challenge: {
             limitScore: 10,
-            goToOver: 0, //Riporta ad una parte con risultato inferiore al limitScore
+            goToOver: 16, //Riporta ad una parte con risultato inferiore al limitScore
             goTo: 13 //Riporta ad una parte con risultato superiore al limitScore
         },
     },
@@ -257,7 +257,7 @@ const storyArrayPaladin = [
         text: "Ce l'hai fatta. Adesso davanti a te si estende una strana sala d'aspetto. Emana una fioca luce viola. Ti dirigi verso la fonte della luce",
         hasCrossroads: false,
         hasChallenge: false,
-        goTo: 7
+        goTo: 23
     },
 
 
@@ -427,9 +427,6 @@ const storyArrayPaladin = [
         hasChallenge: false,
     },
 ];
-
-
-
 
 const storyArrayMage = [
     {

@@ -124,15 +124,15 @@ transition: all 0.3s cubic-bezier(1, 0, 1, 0);
 }
 
 .wrapper-accordion{
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 40rem;
+  height: 35rem;
   width: 31.25rem;
 }
 
 .accordion{
-  width: 18.75rem;
+  width: 25rem;
 }
 
 .container{
@@ -156,7 +156,7 @@ transition: all 0.3s cubic-bezier(1, 0, 1, 0);
 }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
 
 .nonloso > img{
   object-fit: cover;
@@ -164,12 +164,12 @@ transition: all 0.3s cubic-bezier(1, 0, 1, 0);
 }
 
 .wrapper-accordion{
-  width: 25rem;
-  height: 39rem;
+  width: 23rem;
+  height: 36.2rem;
 }
 
 .accordion{
-  width: 15.625rem;
+  width: 19rem;
 }
 
 .container{
