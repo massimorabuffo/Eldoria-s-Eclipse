@@ -11,6 +11,7 @@ import AppContext from './userContext.jsx'
 import "./Style/Navbar.css"
 import "./Style/Home.css"
 import './style.css'
+import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
  <React.StrictMode>

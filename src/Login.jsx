@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useUserContext } from "./userContext";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
+    const notifyError = () => toast.error(`Errore: l'utente "${data.username}" risulta già registrato.`);
+    const notifySuccess = () => toast.success(`Utente "${data.username}" registrato correttamente. Ora puoi effettuare il login!`);
     const navigate = useNavigate();
     const [data, setData] = useState({
         username: '',
@@ -69,7 +72,8 @@ const Login = () => {
                 control = true;
             }})
         if(control){
-            alert(`Errore: l'utente "${data.username}" risulta già registrato.`);
+            console.log("show error");
+            notifyError();
         }else{
             fetch("http://localhost:3000/users", {
                 method: 'POST',
@@ -81,7 +85,7 @@ const Login = () => {
                     'name': data.username,
                     'password': data.password
                 })
-            }).then(alert(`Utente "${data.username}" registrato correttamente. Ora puoi effettuare il login!`))
+            }).then(notifySuccess())
         }
     }
 
@@ -102,6 +106,10 @@ const Login = () => {
 
     return (
         <>
+        <ToastContainer 
+            position="top-center"
+            reverseOrder={false}
+         />
             <div className="form_container">
                 <div className="login_form">
                     <h1 className="form_title">Benvenuto a <br/>Eldoria's Eclipse!</h1>
