@@ -35,7 +35,7 @@ const Login = () => {
 
     const fetchRemoteData = () => {
         const fetchData = async () => {
-            const response = await fetch("http://localhost:3000/users");
+            const response = await fetch("http://localhost:3000/fullusers");
             const dataJson = await response.json();
             setDbData(dataJson);
         }
@@ -47,10 +47,11 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const fetchData = async () => {
-            const response = await fetch("http://localhost:3000/users");
+            const response = await fetch("http://localhost:3000/fullusers");
             const dataJson = await response.json();
+            console.log(dataJson);
             dataJson.map(el => {
-                if(el.name === data.username && el.password === data.password){
+                if(el.username === data.username && el.password === data.password){
                     setUser(data);
                     navigate(`/${el.name}/${el.id}`);
                 } else{
@@ -75,14 +76,14 @@ const Login = () => {
             console.log("show error");
             notifyError();
         }else{
-            fetch("http://localhost:3000/users", {
+            fetch("http://localhost:3000/signup", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
                     'id': dbData.length + 1, // Qui viene sfruttato lo state "dbData" (con le info degli utenti in database) per creare un numero di ID sempre progressivo.
-                    'name': data.username,
+                    'username': data.username,
                     'password': data.password
                 })
             }).then(notifySuccess())

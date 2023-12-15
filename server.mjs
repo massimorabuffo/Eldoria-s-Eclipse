@@ -12,7 +12,7 @@ import 'dotenv/config'  //installazione dotenv per la SECRET
 //*IMPORTANTE se si vuole vedere il contenuto della tabella http://localhost:3000/fullusers farlo dopo aver fatto prima il signup perche sennò darà errore perchè la tabella è vuota
 
 const pgp = pgPromise();
-const db = pgp("postgres://postgres:postgres@localhost:5432/project");
+const db = pgp("postgres://postgres:postgress@localhost:5432/dndUsers");
 
 const app = express();
 app.use(express.json());
