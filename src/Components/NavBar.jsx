@@ -1,7 +1,9 @@
 import { Link} from "react-router-dom";
 import Dice from "./Dice";
 
-function Navbar( {onOpenSideBar, sidebarVisible}) {
+function Navbar( {onOpenSideBar, sidebarVisible, handleLogout}) {
+
+
 
   return (
     <nav className="navbar">
@@ -28,7 +30,7 @@ function Navbar( {onOpenSideBar, sidebarVisible}) {
 
 
         <li className="List-Nav ">
-        <button>
+        <button onClick={handleLogout}>
             <Link className="Tab" to="/">
               Logout
             </Link>
@@ -37,7 +39,7 @@ function Navbar( {onOpenSideBar, sidebarVisible}) {
 
         <li className="List-Nav">
           <button>
-            <Link className="Tab" to="/:user/:id">
+            <Link className="Tab" to="/home/:user">
               Home
             </Link>
           </button>

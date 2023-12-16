@@ -2,6 +2,7 @@ import express from "express"; //installazione express
 import pgPromise from "pg-promise"; //installazione pgPromise per il database
 import jwt from "jsonwebtoken" // installazione jwt per la creazione e verifica del token
 import 'dotenv/config'  //installazione dotenv per la SECRET
+import cors from "cors"
 
 //per provare con postman
 
@@ -17,6 +18,7 @@ const db = pgp("postgres://postgres:postgres@localhost:5432/project");
 const app = express();
 app.use(express.json());
 const PORT = 3000
+app.use(cors());
 
 db.none(`
 
@@ -28,6 +30,12 @@ DROP TABLE IF EXISTS users;
     password TEXT,
     token TEXT
   );
+
+  INSERT INTO users (username, password, token)
+  VALUES ('pippo', 'pippo', 'null');
+
+  COMMIT;
+
 `);
 
 
@@ -37,7 +45,7 @@ app.get('/fullusers', async (req, res) => { //per vedere tutti i dati che ho nel
       res.status(200).json(users);
     } catch (error) {
       console.error(error);
-      res.status(500).json({msg: "Problem fullusers"});
+      res.status(500).json([{msg: "Problem fullusers"}]);
     }
   });
 
