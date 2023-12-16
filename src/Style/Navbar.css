@@ -1,9 +1,119 @@
+/* SEZIONE NUOVA */
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 5.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  opacity: 0.98;
+  z-index: 100;
+}
+
+.navbar-container-left {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-img {
+  height: 90px;
+  width: 180px;
+}
+.Title {
+  color: white;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.navbar-container-middle{
+  display: flex;
+  justify-content: start;
+  width: 35%;
+}
+.navbar-container-right {
+  margin-top: 20px;
+}
+
+.nav-ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  margin-right: 30px;
+}
+
+/* .list-nav {
+
+} */
+
+.list-nav>button {
+  background: none;
+  border: none;
+}
+.list-nav>button:hover {
+  background-color: #cfb000;
+  border-radius: 20px;
+}
+
+.Tab {
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.Tab:hover {
+  color: #000000;
+}
+.user{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    font-size: var(--font-size-desktop);
+    color: white;
+}
+#arrow-down{
+  font-size: 15px;
+}
+.user:hover .dropdown-option{
+  display: flex;
+  width: 460px;
+  height: 330px;
+  border-radius: 7px;
+  visibility: visible;
+}
+.dropdown-option{
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: height .5s cubic-bezier(1, 0, 0.1, 1) 0s;
+    position: absolute;
+    z-index: 1;
+    margin-top: 2.8rem;
+    background-color: var(--clr-hover-nav);
+}
+.dropdown-option ul{
+  list-style: none;
+}
+.user-option a{
+  text-decoration: none;
+  color: white;
+}
+
+
 /*dado*/
 
 .dice {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background-image: url('https://www.dadi-online.it/img/dadi/20-facce/dadi-20-facce.png');
   background-size: cover;
   animation: rotateDice 2s linear infinite;
@@ -17,15 +127,14 @@
 
 #dice-number {
   position: absolute;
-  top: 0;
+  top: 13%;
   left: 0;
   right: 0;
   bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  font-family: 'MedievalSharp';
+  font-size: 20px;
 }
 
 
@@ -53,16 +162,16 @@
 
 
 
-.navbar {
+/* .navbar {
   width: 100%;
   height: 5.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: linear-gradient(to right, #5c0e0e 5%, #c02323 40%, #2c180b 100%);
+  background-color:  #191717;
   opacity: 0.98;
   z-index: 100;
-}
+} */
 
 .nav-container {
   width: 100%;
@@ -72,8 +181,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2rem;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .List-Nav-Flex {
@@ -81,18 +189,21 @@
   align-items: center;
 }
 
-.Tab:hover{
-  border-bottom: 2px solid white;
-}
 
-.Tab {
+/* .Tab:hover {
+  border-bottom: 2px solid white;
+  border: 1px solid white;
+  border-radius: 20px;
+} */
+
+/* .Tab {
   font-family: 'MedievalSharp';
   font-size: 25px;
   text-decoration: none;
   color: white;
   margin: 0;
   cursor: pointer;
-}
+} */
 
 .nav-container button {
   border: 0;
@@ -100,18 +211,17 @@
   cursor: pointer;
 }
 
-.Title {
+/* .Title {
   color: white;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 40px;
-  font-family: 'MedievalSharp';
-}
+} */
 
-.Omino {
+/* .Omino {
   width: 35px;
   margin-left: 1rem;
   margin-top: 1rem;
-}
+} */
 
 .sidebar {
   width: 14rem;
@@ -119,7 +229,7 @@
   position: fixed;
   top: 0;
   left: -25rem;
-  background: linear-gradient(to bottom, #5c0e0e 5%, #600808 40%, #321c0d 100%);
+  background: black;
   transition: 0.5s;
   overflow-x: hidden;
   z-index: 99;
@@ -187,7 +297,25 @@
   .nav-container {
     display: none;
   }
-
+  .navbar-container-left{
+    display: flex;
+    justify-content: center;
+  }
+  .navbar-img {
+    display: none;
+  }
+  .Title{
+    font-size: 40px;
+  }
+  .navbar-container-middle{
+    display: none;
+  }
+  .navbar-container-right {
+    display: none;
+  }
+  .Tab:hover{
+    color: #000000;
+  }
   .menu-icon-hamburger {
     cursor: pointer;
     display: flex;
@@ -244,7 +372,10 @@
     gap: 2rem;
     margin-top: 40px;
   }
-
+  .posizione-sidebar .Tab:hover{
+    background-color: #cfb000;
+    border-radius: 20px;
+  }
   .sidebar.visible {
     left: 0;
   }
@@ -254,19 +385,14 @@
     align-items: center;
   }
 
-  .Title {
-    margin-top: 10px;
-    font-size: 52px;
-  }
-
   .dice {
     width: 61px;
     height: 61px;
   }
 }
 
-@media (max-width: 426px){
-  .List-Nav-Flex-Mobile{
+@media (max-width: 426px) {
+  .List-Nav-Flex-Mobile {
     margin-left: 30px;
   }
 }

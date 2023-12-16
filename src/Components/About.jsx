@@ -46,7 +46,7 @@ export function About() {
 
   return (
     <div>
-      <div className="nonloso">
+      <div className="image">
         <img src="src\assets\images\0_RUSGLIjpQVY7kt4Y.jpg" alt="" />
       </div>
 
