@@ -213,7 +213,7 @@ body::-webkit-scrollbar {
     flex-wrap: wrap;
     flex-direction: column;
     margin-bottom: 16px;
-    margin-left:45px;
+    margin-left: 45px;
 }
 
 .container-hero {
@@ -234,12 +234,16 @@ body::-webkit-scrollbar {
 .start-button {
     cursor: pointer;
     border-radius: 20px;
-    border: 3px solid rgb(10, 10, 10);
+    border: 3px solid #cfb000;
     padding: 10px;
-    background-color: #920c0c;
+    background-color: #8f0000;
     color: black;
     height: 70px;
     box-shadow: 0px 15px 4px rgba(0, 0, 0, 0.4);
+}
+
+.start-button>h1 {
+    font-weight: 700;
 }
 
 .container-continue-button {
@@ -292,7 +296,7 @@ body::-webkit-scrollbar {
     .background-home>h1 {
         font-size: 2rem;
         height: max-content;
-        
+
     }
 
     /* SVG */
@@ -432,9 +436,10 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 768px) {
 
-    .background-home>h1{
+    .background-home>h1 {
         font-size: 3rem;
     }
+
     /* SVG */
 
 
@@ -511,14 +516,7 @@ body::-webkit-scrollbar {
     .start-button {
         margin-top: 15px;
         cursor: pointer;
-        border-radius: 20px;
-        border: 3px solid rgb(10, 10, 10);
         padding: 8px;
-        background-color: #920c0c;
-        color: black;
-        height: 70px;
-        box-shadow: 0px 15px 4px rgba(0, 0, 0, 0.4);
-        font-weight: bold;
     }
 
     .container-continue-button {

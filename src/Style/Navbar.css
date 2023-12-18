@@ -76,7 +76,7 @@
     cursor: pointer;
     font-size: var(--font-size-desktop);
     color: white;
-    width: 100px;
+    width: 180px;
     padding: 0 .45rem;
     font-weight: bold;
 }
@@ -97,12 +97,14 @@
 .user:hover #arrow-down{
   fill: #000000;
 }
+
 #arrow-down{
   font-size: 25px;
-  padding-left: 0.55rem;
+  padding-left: 2rem;
   margin-bottom: 0.75rem;
   font-weight: bold;
 }
+
 .user:hover .dropdown-option{
   background-color: black;
   width: 140px;
@@ -110,15 +112,16 @@
   border-radius: 7px;
   visibility: visible;
 }
+
 .dropdown-option{
     visibility: hidden;
     height: 0;
     overflow: hidden;
     transition: height .5s cubic-bezier(1, 0, 0.1, 1) 0s;
     position: absolute;
-    left: -20%;
+    left: 5%;
     z-index: 1;
-    margin-top: 2.53rem;
+    margin-top: 2.5rem;
     background-color: var(--clr-hover-nav);
 }
 .dropdown-option ul{
@@ -139,7 +142,7 @@
 }
 
 
-/*dado*/
+/*DADO*/
 
 .dice {
   position: relative;
@@ -189,7 +192,7 @@
 }
 
 
-/*fine dado*/
+/*FINE DADO*/
 
 
 
@@ -362,7 +365,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 20px;
   }
 
   .menu-icon-hamburger span {

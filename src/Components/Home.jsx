@@ -1,12 +1,10 @@
 import { useState } from "react"
 import "./Adventure"
 import { Outlet, useNavigate } from "react-router-dom"
-import { useUserContext } from "../userContext"
 
 export function Home() {
     const [hidden, setHidden] = useState()
     const navigate = useNavigate()
-    const {user} = useUserContext();
 
     function startAdventure() {
         setHidden((item) => !item)
@@ -15,7 +13,6 @@ export function Home() {
     return (
         <>
             <div className="background-home">
-                <h1>Bentornato, {user.username}!</h1>
                 <div className="container-sword-svg">
                     <img src='../src/assets\swords-svg.png'/>
                 </div>
@@ -23,7 +20,7 @@ export function Home() {
                     <button
                         className={!hidden ? 'active' && 'start-button' : 'disactive'}
                         onClick={startAdventure}>
-                        <h1>Inizia la tua avventura!</h1>
+                        <h1>Inizia la tua avventura</h1>
                     </button>
                 </div>
             </div>

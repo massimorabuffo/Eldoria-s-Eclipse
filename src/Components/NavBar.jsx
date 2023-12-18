@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import Dice from "./Dice";
+import { useUserContext } from "../userContext"
 
 function Navbar({ onOpenSideBar, sidebarVisible }) {
-
+  const {user} = useUserContext();
   return (
     <nav className="navbar">
 
@@ -49,7 +50,7 @@ function Navbar({ onOpenSideBar, sidebarVisible }) {
 
           <li>
             <div className="user">
-              <span>User<svg
+              <span>{user.username}<svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="0.625em"
                 viewBox="0 0 512 512"
