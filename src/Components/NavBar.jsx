@@ -41,32 +41,35 @@ function Navbar({ onOpenSideBar, sidebarVisible }) {
             </button>
           </li>
 
-          <li className="list-nav ">
+          {/* <li className="list-nav ">
             <button>
               <Link className="Tab" to="/">Logout</Link>
             </button>
-          </li>
-          <div className="user">
-            <span>User<svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="0.625em"
-              viewBox="0 0 512 512"
-              id="arrow-down">
-              <path
-                d="M233.4 406.6c12.5 12.5 32.8 12.5 
-          45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg></span>
+          </li> */}
 
-            <div className="dropdown-option">
-              <div className="user-option">
-                <ul>
-                  <li><a href="">Ultimi giochi</a></li>
-                  <li><Link className="Tab" to="/">Logout</Link></li>
-                </ul>
+          <li>
+            <div className="user">
+              <span>User<svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="0.625em"
+                viewBox="0 0 512 512"
+                id="arrow-down">
+                <path
+                  d="M233.4 406.6c12.5 12.5 32.8 12.5 
+            45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg></span>
+
+              <div className="dropdown-option">
+                <div className="user-option">
+                  <ul>
+                    <li><a href="">Account</a></li>
+                    <li><Link className="Tab" to="/">Logout</Link></li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-        </ul>
-      </div>
+           </li>
+          </ul>
+        </div>
       {/* <li className="List-Nav-Flex-Mobile">
         <div className="dice" id="animated-dice">
           <Dice />
