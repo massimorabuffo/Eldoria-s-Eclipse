@@ -657,7 +657,6 @@ const storyArrayMage = [
 
 export function GameTry() {
 
-
     const { hero } = useParams()
 
     const getArrayStoryFromHero = (hero) => {  // in base al parametro di hero la funzione ci restituisce un array che andra nello state che verra usato per eseguire il map
@@ -671,15 +670,11 @@ export function GameTry() {
         }
     }
 
-
-
     const [arrayToHero, setArrayToHero] = useState(getArrayStoryFromHero(hero)  ) //da non andare a modificare 
     const [userStoryArray, setUserStoryArray] = useState([arrayToHero[1]]);  //Parte da 1 perche 0 = morte!
-
     const [gameOver, setGameOver] = useState(false)
 
-    
-
+    //Funzione che gestisce l'avanzamento della storia con dei controlli sull'index.
     const handleUserChoice = (index) => {  //se la lunghezza è minore dell'array allora aggiorna lo state
         if (index >= 0 && index < arrayToHero.length) {
             setUserStoryArray((userStoryArray) => [...userStoryArray, arrayToHero[index]]);
@@ -693,8 +688,10 @@ export function GameTry() {
     const handleDiceRoll = (step) => {
         const diceScore = Math.floor(Math.random() * 20) + 1;
         alert(`Hai ottenuto ${diceScore}`);
+        //Se il numero uscito è maggiore di limitScore allore index prende il valore di goTo.
         if (diceScore > step.challenge.limitScore) {
-            handleUserChoice(step.challenge.goTo);  //se il numero uscito è maggiore di limitScore allore index prende il valore di goTo
+            handleUserChoice(step.challenge.goTo); 
+        // Se minore index prende il valore di goToOver.
         } else {
             handleUserChoice(step.challenge.goToOver); // se minore index prende il valore di goToOver
         }

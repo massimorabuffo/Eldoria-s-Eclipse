@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 export function Adventure() {
     const [hero, setHero] = useState('')
     const navigate = useNavigate()
-
+    //Questo useEffect permette di passare al componente successivo il valore di hero che verrà scelto dall'utente tramite il click delle card.
     useEffect(() => {
         if (hero) {
           navigate(`/gametry/${hero}`);
