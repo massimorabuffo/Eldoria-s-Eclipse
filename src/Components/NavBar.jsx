@@ -31,7 +31,7 @@ function Navbar({ onOpenSideBar, sidebarVisible, handleLogout }) {
         <ul className="nav-ul">
           <li className="list-nav">
             <button>
-              <Link className="Tab" to="/:user/:id">Home</Link>
+              <Link className="Tab" to="/home/:user">Home</Link>
             </button>
           </li>
           <li className="list-nav">
