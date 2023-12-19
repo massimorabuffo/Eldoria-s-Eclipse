@@ -5,7 +5,7 @@ export const useUserContext = () => useContext(UserContext);
 
 const AppContext = (props) => {
     const [user, setUser] = useState({
-        username: '',
+        username: 'user',
         password: '',
         remember: false,
     });

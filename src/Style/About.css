@@ -1,11 +1,11 @@
-.nonloso > img{
+.image > img{
   height: fit-content;
   width: 100%;
   object-fit: cover;
   position: relative;
 }
 
-.nonloso > h1{
+.image > h1{
 color: var(--clr-main);
 position: absolute;
 top: 20%;
@@ -80,7 +80,7 @@ transition: all 0.3s cubic-bezier(1, 0, 1, 0);
 }
 
 @media screen and (max-width: 1024px) {
-.nonloso > img{
+.image > img{
   height: 100vh;
   width: 100%;
   object-fit: cover;
@@ -117,7 +117,7 @@ transition: all 0.3s cubic-bezier(1, 0, 1, 0);
 }
 
 @media screen and (max-width: 768px) {
-.nonloso > img{
+.image > img{
   height: 100svh;
   width: 100%;
   object-fit: cover;
@@ -158,7 +158,7 @@ transition: all 0.3s cubic-bezier(1, 0, 1, 0);
 
 @media screen and (max-width: 426px) {
 
-.nonloso > img{
+.image > img{
   object-fit: cover;
   height: 100vh;
 }
