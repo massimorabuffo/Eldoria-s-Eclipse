@@ -75,7 +75,7 @@ body::-webkit-scrollbar {
 }
 
 .container-adventure {
-    background-color: rgb(188, 158, 122);
+    background: linear-gradient(to top, #724b30 3%, #bc9e7a 40%, #724b30 100%);
     width: 75%;
 }
 
@@ -85,6 +85,7 @@ body::-webkit-scrollbar {
     align-items: center;
     margin-top: 15px;
     margin-bottom: 20px;
+    padding-top: 5.5rem;
 }
 
 .text-adventure {
@@ -96,7 +97,6 @@ body::-webkit-scrollbar {
 
 .text-adventure>p {
     font-size: 20px;
-    padding-top: 5.5rem;
     font-weight: bold;
     color: #000000;
 }
@@ -201,17 +201,16 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 52px 0 0 0;
 }
 
 .text-game {
     font-size: 20px;
     font-weight: 700;
-    margin: 10px 0px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-bottom: 16px;
     margin-left: 45px;
 }
 
