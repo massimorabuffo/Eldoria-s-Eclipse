@@ -17,7 +17,7 @@ function Sidebar(props) {
 
     <div className="posizione-sidebar">
       <div className="Tab" onClick={()=>{
-        navigate("/:user/:id")
+        navigate("/home/:user")
         props.onClose()
       }}>
           Home
@@ -35,6 +35,7 @@ function Sidebar(props) {
           Rules
       </div>
       <div className="Tab"onClick={()=>{
+        props.handleLogout()
         navigate("/")
         props.onClose()
       }}>
