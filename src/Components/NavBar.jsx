@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import Dice from "./Dice";
 import { useUserContext } from "../userContext"
 
-function Navbar( {onOpenSideBar, sidebarVisible}) {
+function Navbar({ onOpenSideBar, sidebarVisible, handleLogout }) {
+  const { user } = useUserContext();
 
   return (
     <nav className="navbar">
@@ -14,12 +15,14 @@ function Navbar( {onOpenSideBar, sidebarVisible}) {
           <span></span>
         </div>
       }
+      {/* NAVBAR LEFT */}
       <div className="navbar-container-left">
         <div className="navbar-container-img">
           <img className="navbar-img" src="..\public\964642-dragon-Dungeons-amp-Dragons-DampD-red-black.png" alt="drago-rosso-navbar" />
         </div>
         <h2 className="Title">Eldoria's Eclipse</h2>
       </div>
+      {/* NAVBAR MIDDLE */}
       <div className="navbar-container-middle">
         <div className="dice" id="animated-dice"><Dice /></div>
       </div>
@@ -42,12 +45,6 @@ function Navbar( {onOpenSideBar, sidebarVisible}) {
             </button>
           </li>
 
-          {/* <li className="list-nav ">
-            <button>
-              <Link className="Tab" to="/">Logout</Link>
-            </button>
-          </li> */}
-
           <li>
             <div className="user">
               <span>{user.username}<svg
@@ -68,67 +65,9 @@ function Navbar( {onOpenSideBar, sidebarVisible}) {
                 </div>
               </div>
             </div>
-           </li>
-          </ul>
-        </div>
-      {/* <li className="List-Nav-Flex-Mobile">
-        <div className="dice" id="animated-dice">
-          <Dice />
-        </div>
-        <h2 className="Title">Eldoria's Eclipse</h2>
-      </li>
-
-      <ul className="nav-container">
-
-
-        <li className="List-Nav ">
-        <button>
-            <Link className="Tab" to="/">
-              Logout
-            </Link>
-          </button>
-        </li>
-
-        <li className="List-Nav">
-          <button>
-            <Link className="Tab" to="/:user/:id">
-              Home
-            </Link>
-          </button>
-        </li>
-
-        <li className="List-Nav-Flex">
-          <div className="dice" id="animated-dice">
-            <Dice />
-          </div>
-          <h2 className="Title">Eldoria's Eclipse</h2>
-        </li>
-
-        <li className="List-Nav">
-          <button>
-            <Link className="Tab" to="/:user/:id">Home</Link>
-          </button>
-        </li>
-
-
-        <li className="List-Nav">
-          <button>
-            <Link className="Tab" to="/About">About</Link>
-          </button>
-        </li>
-        <li className="List-Nav">
-          <button>
-            <Link className="Tab" to="/Rules">Rules</Link>
-          </button>
-        </li>
-
-        <li className="List-Nav ">
-          <button>
-            <Link className="Tab" to="/">Logout</Link>
-          </button>
-        </li>
-
-      </ul> */}
+          </li>
+        </ul>
+      </div>
 
     </nav>
   );
