@@ -88,16 +88,15 @@ body::-webkit-scrollbar {
 }
 
 .text-adventure {
-    margin: 14px 0px;
     width: 85%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-bottom: 20px;
 }
 
 .text-adventure>p {
     font-size: 20px;
+    padding-top: 5.5rem;
     font-weight: bold;
     color: #000000;
 }

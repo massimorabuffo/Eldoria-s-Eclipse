@@ -426,4 +426,20 @@
   .List-Nav-Flex-Mobile {
     margin-left: 30px;
   }
+
+  .Title{
+    font-size: 28px;
+    width: 210px;
+    padding-left: 70px;
+    margin-top: 10px;
+  }
+
+  .navbar-container-left{
+    margin-left: 100px;
+  }
+
+  .navbar-img{
+    transform: scaleX(-1);
+    width: 100px;
+  }
 }
