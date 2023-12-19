@@ -35,58 +35,83 @@ const Login = () => {
 
     const fetchRemoteData = () => {
         const fetchData = async () => {
-            const response = await fetch("http://localhost:3000/users");
+            const response = await fetch("http://localhost:3000/fullusers");
             const dataJson = await response.json();
             setDbData(dataJson);
         }
         fetchData();
     }
+    
 
     // Funzione che gestisce il submit da parte dell'utente, controlla se le credenziali coincidono con quelle nel database remoto e, se si, sfrutta lo useNavigate per far visualizzare il componente Home.
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        const fetchData = async () => {
-            const response = await fetch("http://localhost:3000/users");
-            const dataJson = await response.json();
-            dataJson.map(el => {
-                if(el.name === data.username && el.password === data.password){
-                    setUser(data);
-                    navigate(`/${el.name}/${el.id}`);
-                } else{
-                    setShowError(true);
-                }
-            })
-        }
-        fetchData();
+        try {
+            const response = await fetch('http://localhost:3000/login', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(data),
+            });
+        
+            // Analizza la risposta dal backend
+            const responseData = await response.json();
+        
+            if (responseData.token) {
+              // Login riuscito
+              console.log('Login riuscito!');
+              // Memorizza il token nel localStorage o in un altro sistema di gestione delle sessioni
+              localStorage.setItem('token', responseData.token);
+              // Puoi anche eseguire altre azioni post-login se necessario
+              setUser(data);
+              navigate(`/home/${data.username}`)
+            } else{
+                setShowError(true);
+            }
+          } catch (error) {
+            console.error(error);
+          }
     }
 
     // Funzione che viene triggherata al click del button "registarti". Esegue un controllo per verificare la presenza delle credenziali inserite dall'utente nel database, e in caso affermativo mostra un alert di errore.
     // Dopo il controllo, esegue la registrazione del nuovo utente nel database, tramite una chiamata fetch con method 'POST'.
 
-    const handleRegistration = (event) => {
+    const handleRegistration = async (event) => {
         event.preventDefault();
-        let control = false;
-        dbData.map(el => {
-            if(el.name === data.username){
-                control = true;
-            }})
-        if(control){
-            console.log("show error");
-            notifyError();
-        }else{
-            fetch("http://localhost:3000/users", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    'id': dbData.length + 1, // Qui viene sfruttato lo state "dbData" (con le info degli utenti in database) per creare un numero di ID sempre progressivo.
-                    'name': data.username,
-                    'password': data.password
+        try {
+            console.log(dbData);
+            let control = false;
+            dbData.map(el => {
+                if(el.username=== data.username){
+                    control = true;
+                }})
+               
+            if(control){
+                console.log("show error");
+                notifyError();
+            }else{
+               await fetch("http://localhost:3000/signup", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data) //prendiamo i dati che inseriamo tramite data e li portiamo nel database
                 })
-            }).then(notifySuccess())
+                console.log(data);
+                notifySuccess()
+                // setData({
+                //     username: '',
+                //     password: '',
+                //     remember: false,
+                // }) da vedere se necessario al momento si se cade il server.mjs e non npm run dev
+            }
+            
+        } catch (error) {
+            console.log(error);
         }
+       
     }
 
     // Funzione che gestisce lo switch tra i button Login/Registrati (lo state registerHandler viene richiamato nell'operatore ternario a riga 115).
