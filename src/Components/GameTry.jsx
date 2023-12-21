@@ -1,6 +1,19 @@
 import { Paragraph } from "./Paragraph";
 import { useState } from 'react';
 import { useParams } from "react-router-dom"
+import { ToastContainer, toast } from 'react-toastify';
+
+const notifyDiceResult = (diceScore) => toast(`Hai ottenuto ${diceScore}`, {
+    style: {
+      border: '1px solid #713200',
+      padding: '16px',
+      color: '#713200',
+    },
+    iconTheme: {
+      primary: '#713200',
+      secondary: '#FFFAEE',
+    },
+  });
 
 const storyArrayPaladin = [
     {
@@ -687,7 +700,8 @@ export function GameTry() {
 
     const handleDiceRoll = (step) => {
         const diceScore = Math.floor(Math.random() * 20) + 1;
-        alert(`Hai ottenuto ${diceScore}`);
+        // alert(`Hai ottenuto ${diceScore}`);
+        notifyDiceResult(diceScore);
         //Se il numero uscito è maggiore di limitScore allore index prende il valore di goTo.
         if (diceScore > step.challenge.limitScore) {
             handleUserChoice(step.challenge.goTo); 
@@ -704,6 +718,10 @@ export function GameTry() {
 
     return (
         <div className="wrapper-game">
+            <ToastContainer
+                position="top-center"
+                reverseOrder={false}
+            />
             <div className="container-game">
                 <div className="container-text-game">
                     <div>
