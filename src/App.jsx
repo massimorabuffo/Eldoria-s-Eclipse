@@ -8,7 +8,6 @@ import Navbar from "./Components/NavBar.jsx";
 import { GameTry } from "./Components/GameTry.jsx";
 import { useState } from "react";
 import Sidebar from "./Components/Sidebar.jsx";
-import FormProva from "./FornProva.jsx";
 
 function App() {
 

@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS users;
 
   CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
-    username TEXT,
-    password TEXT,
+    username TEXT NOT NULL,
+    password TEXT NOT NULL,
     token TEXT
   );
 
